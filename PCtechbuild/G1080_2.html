@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+</head>
+<body> 
+  <section class="hidden">
+    <a href="index2.html"><button class="btn" style="position: absolute; bottom: 96%;">Home</button></a>
+    <div class="container">
+      <table class="bp-part-list" border="4">
+        <thead>
+          <tr>
+            <th colspan="3"><p> Mid Range 1080p PC - intel Build </p></th>
+          </tr>
+        </thead>
+      
+          
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Item</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+          <tr>
+                <td class="bp-part-list-type">CPU</td>
+                <td class="bp-part-list-item">Intel Core i5-12400F</td>
+                <td class="bp-part-list-price">745</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">Motherboard</td>
+                <td class="bp-part-list-item">MSI Pro B660M-A DDR4</td>
+                <td class="bp-part-list-price">446.35</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">GPU</td>
+                <td class="bp-part-list-item">Zotac RTX 3060 Gaming Twin Edge OC</td>
+                <td class="bp-part-list-price">1610</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">RAM</td>
+                <td class="bp-part-list-item">Team T-Force Vulcan Z 16 GB DDR4-3200 CL16</td>
+                <td class="bp-part-list-price">153.76</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">Storage</td>
+                <td class="bp-part-list-item">Mushkin Enhanced Helix-L 1 TB</td>
+                <td class="bp-part-list-price">168.77</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">PSU</td>
+                <td class="bp-part-list-item">Thermaltake Toughpower GF1 ARGB 650 W 80+ Gold</td>
+                <td class="bp-part-list-price">345.07</td>
+              </tr>
+          <tr>
+                <td class="bp-part-list-type">Case</td>
+                <td class="bp-part-list-item">Corsair 4000D Airflow</td>
+                <td class="bp-part-list-price">356.32</td>
+              </tr>
+              <tr>
+                
+                <td colspan="2" class="bp-part-list-total">Total</td>
+                <td class="bp-part-list-total-price">3,825.27 SAR</td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div>
+      
+  </section>
+
+<section class="hidden">
+ 
+  <div class="container reveal" >
+    <canvas id="myChart" style="width:100%;max-width:600px">
+      <div id="detail-history" class="price-history-container" data-product="6ee9423e-f36b-1410-8bb1-003fe7c988bc" data-currency="SAR " style="padding: 0px; position: relative;">
+                                    
+        <canvas class="flot-base" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+        <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+          <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 47px; text-align: center;">Dec 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 129px; text-align: center;">Dec 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 218px; text-align: center;">Jan 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 300px; text-align: center;">Jan 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 387px; text-align: center;">Feb 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 464px; text-align: center;">Feb 15</div>
+          </div>
+          <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 263px; left: 2px; text-align: right;">SAR 1800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 220px; left: 2px; text-align: right;">SAR 2000</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 176px; left: 2px; text-align: right;">SAR 2200</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 132px; left: 2px; text-align: right;">SAR 2400</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 88px; left: 2px; text-align: right;">SAR 2600</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 44px; left: 2px; text-align: right;">SAR 2800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">SAR 3000</div>
+          </div>
+        </div>
+        <canvas class="flot-overlay" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+      </div>
+    
+    </canvas>
+  </div>
+
+  <div class="container reveal">
+    <canvas id="myChart2" style="width:100%;max-width:600px">
+      <div id="detail-history" class="price-history-container" data-product="9742433e-f36b-1410-8bb0-003fe7c988bc" data-currency="SAR " style="padding: 0px; position: relative;">
+                                      
+        <canvas class="flot-base" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+        <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+          <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 47px; text-align: center;">Dec 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 129px; text-align: center;">Dec 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 218px; text-align: center;">Jan 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 300px; text-align: center;">Jan 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 387px; text-align: center;">Feb 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 464px; text-align: center;">Feb 15</div>
+          </div>
+          <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 263px; left: 2px; text-align: right;">SAR 740</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 211px; left: 2px; text-align: right;">SAR 760</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 158px; left: 2px; text-align: right;">SAR 780</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 106px; left: 2px; text-align: right;">SAR 800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 53px; left: 2px; text-align: right;">SAR 820</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">SAR 840</div>
+          </div>
+        </div>
+        <canvas class="flot-overlay" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;"></canvas>
+      </div>
+      </canvas>
+  </div>
+</section>
+
+
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var chart = new Chart(document.getElementById("myChart"), {
+      type: 'line',
+      data: {
+        labels: ["Feb 01", "Feb 15", "Mar 01", "Mar 16", "Apr 01", "Apr 16"],
+        datasets: [{
+          data: [1656,1650, 1611, 1610, 1610, 1610],
+          label: "Newegg Saudi Arabia",
+          borderColor: "#edc240",
+          fill: false
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'GPU Price History (SAR)'
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  });
+
+
+  </script>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var chart = new Chart(document.getElementById("myChart2"), {
+      type: 'line',
+      data: {
+        labels: ["Feb 01", "Feb 15", "Mar 01", "Mar 16", "Apr 01", "Apr 16"],
+        datasets: [{
+          data: [759, 764, 775, 764, 759, 745],
+          label: "Newegg Saudi Arabia",
+          borderColor: "#edc240",
+          fill: false
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'CPU Price History (SAR)'
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+    window.addEventListener('scroll', reveal);
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+
+        
+    }
+  
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else{
+                entry.target.classList.remove('show');
+                
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(element => {
+        observer.observe(element);
+    });
+        
+    
+</script>
+
+<div class="container " style="padding-top:10vh">
+  <h1 class="reveal">Below are benchmarks tested for productivity reasons for the pc above to see the pc performance. SCROLL DOWN</h1>
+  <h2 class="reveal">Benchmarks</h2>
+<div class="bench reveal">
+  <div class="gpubench_benchmark">
+    <b>Performance Rating</b>
+    <span style="font-size:0.8em"> - 3DMark 11 + Fire Strike + Time Spy</span>
+  </div>
+  
+  <div  style="clear:both;">
+    
+    <div class="paintAB_bar_sur" style="line-height:12px">
+  
+      <div class="bb_2" style="background-color:#0a0a0a; width:28%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:28%"></div>
+      <div class="bb_5" style="width:37%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">39.8 pt pt</span> (41%) </div>
+      
+  </div>
+</div>
+ <br>
+ <br>
+
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Time Spy Score
+   
+    
+    <div class="paintAB_bar_sur" style="line-height:12px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:21%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:21%"></div>
+      <div class="bb_5" style="width:44%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">8721 Points</span> (27%) </div>
+  </div>
+  <br>
+ <br>
+
+
+  <div class="gpubench_benchmark">
+   </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Time Spy Graphics
+    <div class="paintAB_bar_sur" style="line-height:12px">
+      <div class="bb_2" style="background-color:#0a0a0a; width:18%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:18%"></div>
+      <div class="bb_5" style="width:47%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">8559 Points </span> (23%) </div>
+  </div>
+  <br>
+ <br>
+
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Fire Strike Standard Score
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:25%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:25%"></div>
+      <div class="bb_5" style="width:40%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">19572 Points</span> (35%) </div>
+  </div>
+  <br>
+ <br>
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Fire Strike Standard Graphics
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:18.5%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:18.5%"></div>
+      <div class="bb_5" style="width:46.5%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">21379 Points</span> (24%) </div>
+  </div>  
+  <br>
+ <br>
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DM11 Performance GPU
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:18.5%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:18.5%"></div>
+      <div class="bb_5" style="width:46.5%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">28375 Points</span> (24%) </div>
+  </div> 
+  <br>
+ <br>
+
+
+
+
+<div class="gpubench_benchmark">
+</div>
+<div class='bench reveal' style="clear:both;">
+<b>Peak Temperature</b>
+<div class="paintAB_bar_sur" style="line-height:12px">
+  
+  <div  class="bb_2" style="background-color:#141414; width:46%;height:12px" >
+  </div>
+  
+  <div class="bb_4" style="width:0.5%;height:12px; left: 46%;">
+  </div>
+  <div class="bb_5" style="width:19.5%;height:12px">
+  </div>
+  <div class="tooltip">&#x1F6C8;
+    <span class="tooltiptext"></span>
+  </div>
+</div>
+<div class="paintAB_legend">
+  <span style="color:#000;">75°C</span> (74%)
+ </div>
+</div> 
+<br>
+<br>
+<div class='bench reveal' style="clear:both;">
+  <b>Peak Power Consumption</b>
+  <div class="paintAB_bar_sur" style="line-height:12px">
+    
+    <div class="bb_2" style="background-color:#0a0a0a; width:29%;height:12px;border-left:1px solid #afafaf"></div>
+    <div class="bb_4" style="width:0.4%;height:12px; left:29%"></div>
+    <div class="bb_5" style="width:37%;height:12px">
+    </div>
+    <div class="tooltip">&#x1F6C8;
+      <span class="tooltiptext"></span>
+    </div>
+  </div>
+  <div class="paintAB_legend">
+    <span style="color:#000;">302.1 Watt</span> (43%)
+   </div>
+    
+  </div> 
+  <br>
+  <br>
+</div>
+
+<h2 class="reveal">Game Benchmarks</h2>
+
+<div class="container__clmn">
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/csm_cover_fbf6bc76fc.jpg" loading="lazy" alt="F1 22">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">F1 22</a>
+        </h3> 
+        <span style="color:#666;">2022</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">281</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">258</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">194.2</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">44.6</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">27.9</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">12.9</span> 
+  </div>
+  
+   </div>
+  </div>
+  
+  
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/cyberpunk.jpg" loading="lazy" alt="Cyberpunk 2077 1.5">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Cyberpunk 2077 1.5</a>
+        </h3> 
+        <span style="color:#666;">2022</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">75</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">72.3</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">70.4</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">66.7</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">37.9  </span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">13</span> 
+  </div>
+  
+   </div>
+  </div>
+
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/blood.jpg" loading="lazy" alt="Vampire Bloodhunt">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Vampire Bloodhunt</a>
+        </h3> 
+        <span style="color:#666;">2022</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">372</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">201</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">189.7</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">184.1</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">120.4</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">57.8</span> 
+  </div>
+  
+   </div>
+  </div>
+
+  
+ 
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/csm_cover_4346e1ec97.jpg" loading="lazy" alt="Elden Ring">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Elden Ring</a>
+        </h3> 
+        <span style="color:#666;">2022</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">90</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">80</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">69.7</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">49.9</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">27.9</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">15.9</span> 
+  </div>
+  
+   </div>
+  </div>
+  
+
+
+ 
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/DL2.jpg" loading="lazy" alt="Dying Light 2">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Dying Light 2</a>
+        </h3> 
+        <span style="color:#666;">2022</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">116</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">86.1</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">68.9</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">55.2</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">46.9</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">23.7</span> 
+  </div>
+  
+   </div>
+  </div>
+  
+
+ 
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/forza.jpg" loading="lazy" alt="Forza Horizon 5">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Forza Horizon 5</a>
+        </h3> 
+        <span style="color:#666;">2021</span> 
+      </div>
+    </div>
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">191.1</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">159</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">142</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Extreme Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">58</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Extreme Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">50</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Extreme Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">32</span> 
+  </div>
+  
+   </div>
+  </div>
+  
+
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/halo.jpg" loading="lazy" alt="Halo Infinite">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Halo Infinite</a>
+        </h3> 
+        <span style="color:#666;">2021</span> 
+      </div>
+    </div>
+
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">125.2</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">113</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">92.5</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">88.4</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">78.7</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">42.9</span> 
+  </div>
+  
+  
+   </div>
+  </div>
+
+
+
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/2042.jpg" loading="lazy" alt="Battlefield 2042">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Battlefield 2042</a>
+        </h3> 
+        <span style="color:#666;">2021</span> 
+      </div>
+    </div>
+
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">172.1</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">150</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">122</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">103</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">75.3</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">22.8</span> 
+  </div>
+  
+  
+   </div>
+  </div>
+
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/hitman.jpg" loading="lazy" alt="Hitman 3">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Hitman 3</a>
+        </h3> 
+        <span style="color:#666;">2021</span> 
+      </div>
+    </div>
+
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">245.3</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med.</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">221</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">191</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">174</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">112</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">57</span> 
+  </div>
+  
+  
+   </div>
+  </div>
+
+  <div class="gpugame_surrounding">
+    <div class="gpugame_image">
+      
+        <picture>
+          <img src="images/villiage.jpg" loading="lazy" alt="Resident Evil Village">
+        </picture>
+      
+      <div class="gpugame_header_div_bg"></div>
+      <div class="gpugame_header_div">
+        <h3 class="gpugame_header">
+          <a href="https://www.notebookcheck.net/F1-22-in-test-Notebook-and-desktop-benchmarks.633458.0.html">Resident Evil Village</a>
+        </h3> 
+        <span style="color:#666;">2021</span> 
+      </div>
+    </div>
+
+    <div class="gpugame_details_sur">
+  
+  
+  
+      <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Low Preset 16xAF TAA"><b>low</b> 1920x1080</acronym></div>
+      <div class="gpugame_results"> 
+        <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">266</span> 
+      </div>
+  
+  
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Medium Preset 16xAF TAA"><b>med</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">242</span> 
+    </div>
+    
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="High Preset 16xAF TAA"><b>high</b> 1920x1080</acronym></div>
+  
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">217</span> 
+    </div>
+   
+    <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>ultra</b> 1920x1080</acronym></div>
+    <div class="gpugame_results"> 
+      <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">183</span> 
+    </div>
+  
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>QHD</b> 2560x1440</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">115</span> 
+  </div>
+  
+   <div class="gpugame_details" style="width:px"><acronym class="tooltip" title="Ultra High Preset 16xAF TAA"><b>4K</b> 3840x2160</acronym></div>
+   <div class="gpugame_results"> 
+    <span class="gpugame_resulta" style="background-color:#77ff77;border-color:#77ff77">56.8</span> 
+  </div>
+  
+  
+   </div>
+  </div>
+  
+
+
+</div>
+
+</body>
+</html>

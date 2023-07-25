@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a CPU Cooler</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Fan RPM</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Noise Level </p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Color</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Radiator size</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+                                         <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Cooler-Master-Anodized-Gun-Metal-Brushed/dp/B09KYC4Z98/ref=sr_1_10?adgrpid=103592562378&gclid=CjwKCAiAxvGfBhB-EiwAMPakqhceg_MngjqfBZD5D7kadLqeohWrbgVrysDG5zxccriWEaysYyW_3RoCp9sQAvD_BwE&hvadid=588909916939&hvdev=c&hvlocphy=9076966&hvnetw=g&hvqmt=e&hvrand=11909680251647035321&hvtargid=kwd-13810480&hydadcr=9814_2205583&keywords=cpu%2Bcooler&qid=1677544688&sr=8-10&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Cooler master hyper 212 black.jpg" alt="Cooler Master Hyper 212 Black Edition" id="product-image11">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name11">Cooler Master Hyper 212 Black Edition</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>650 - 2000 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>8 - 30 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>120mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP11">12W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p  id="product-price11">289 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button11" >Add</button>  
+                                            </a>  
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button11");
+                                            var productName = document.getElementById("product-name11");
+                                            var productImage = document.getElementById("product-image11");
+                                            var productPrice = document.getElementById("product-price11");
+                                            var productTDP = document.getElementById("product-TDP11");
+
+                                            var product11= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product11", JSON.stringify(product11));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Deep-Cool-GAMMAXX-Cooler-Green/dp/B084Z5P1N8/ref=asc_df_B084Z5P1N8/?tag=sashogostdde-21&linkCode=df0&hvadid=452931120600&hvpos=&hvnetw=s&hvrand=14312963652827885267&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9076966&hvtargid=pla-910765727470&psc=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/deep cool gammaxx.jpg" alt="Deep Cool GAMMAXX XT -A-RGB CPU Air Cooler" id="product-image12">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name12">Deep Cool GAMMAXX XT -A-RGB CPU Air Cooler</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>1750 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>27.8 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>120mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP12">2.4W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price12">115 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button12" >Add</button>  
+                                                </a>  
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button12");
+                                            var productName = document.getElementById("product-name12");
+                                            var productImage = document.getElementById("product-image12");
+                                            var productPrice = document.getElementById("product-price12");
+                                            var productTDP = document.getElementById("product-TDP12");
+
+                                            var product12= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product12", JSON.stringify(product12));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Cooler-Master-Anodized-Gun-Metal-Brushed/dp/B09KYC4Z98/ref=sr_1_10?adgrpid=103592562378&gclid=CjwKCAiAxvGfBhB-EiwAMPakqhceg_MngjqfBZD5D7kadLqeohWrbgVrysDG5zxccriWEaysYyW_3RoCp9sQAvD_BwE&hvadid=588909916939&hvdev=c&hvlocphy=9076966&hvnetw=g&hvqmt=e&hvrand=11909680251647035321&hvtargid=kwd-13810480&hydadcr=9814_2205583&keywords=cpu%2Bcooler&qid=1677544688&sr=8-10&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Cooler Master Hyper 212 EVO V2.jpg" alt="Cooler Master Hyper 212 EVO V2" id="product-image13">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name13">Cooler Master Hyper 212 EVO V2</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>650 - 1800 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>8 - 27 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black / Silver</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>154 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP13">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price13">243 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button13" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button13");
+                                            var productName = document.getElementById("product-name13");
+                                            var productImage = document.getElementById("product-image13");
+                                            var productPrice = document.getElementById("product-price13");
+                                            var productTDP = document.getElementById("product-TDP13");
+
+                                            var product13= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product13", JSON.stringify(product13));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Deep-Cool-GAMMAXX-XT-A-RGB-CPUCooler/dp/B08JZQZQZ7/ref=sr_1_1?adgrpid=103592562378&gclid=CjwK CAiAxvGfBhB-EiwAM P akqhceg_MngjqfBZD5D7kadLqeohWrbgVrysDG5zxccriWEaysYyW_3RoCp9sQAvD_BwE&hvadid=588909916939&hvdev=c&hvlocphy=9076966&hvnetw=g&hvqmt=e&hvrand=11909680251647035321&hvtargid=kwd-13810480&hydadcr=9814_2205583&keywords=cpu%2Bcooler&qid=1677544688&sr=8-10&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Noctua NH-D15 SE-AM4.jpg" alt="Noctua NH-D15 SE-AM4" id="product-image14">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name14">Noctua NH-D15 SE-AM4</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>300 - 1500 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>19.2 - 24.6 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black / brown</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>165 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP14">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price14">387 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button14" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button14");
+                                            var productName = document.getElementById("product-name14");
+                                            var productImage = document.getElementById("product-image14");
+                                            var productPrice = document.getElementById("product-price14");
+                                            var productTDP = document.getElementById("product-TDP14");
+
+                                            var product14= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product14", JSON.stringify(product14));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Deep-Cool-GAMMAXX-XT-A-RGB-CPUCooler/dp/B08JZQZQZ7/ref=sr_1_1?adgrpid=103592562378&gclid=CjwK CAiAxvGfBhB-EiwAM P akqhceg_MngjqfBZD5D7kadLqeohWrbgVrysDG5zxccriWEaysYyW_3RoCp9sQAvD_BwE&hvadid=588909916939&hvdev=c&hvlocphy=9076966&hvnetw=g&hvqmt=e&hvrand=11909680251647035321&hvtargid=kwd-13810480&hydadcr=9814_2205583&keywords=cpu%2Bcooler&qid=1677544688&sr=8-10&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/DeepCool LS320.jpg" alt="DeepCool LS320" id="product-image15">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name15">DeepCool LS320</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>500 - 2250 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>32.9 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>120 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP15">15W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price15">397 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button15" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button15");
+                                            var productName = document.getElementById("product-name15");
+                                            var productImage = document.getElementById("product-image15");
+                                            var productPrice = document.getElementById("product-price15");
+                                            var productTDP = document.getElementById("product-TDP15");
+
+                                            var product15= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product15", JSON.stringify(product15));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/enermax-ets-t40f-tb/p/N82E16835214063?Description=CPU%20COOLER&cm_re=CPU_COOLER-_-35-214-063-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Enermax ETS-T40.jpg" alt="Enermax ETS-T40" id="product-image16">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name16">Enermax ETS-T40</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>800 - 1800 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>10 - 21 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>162 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP16">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price16">177 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button16" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button16");
+                                            var productName = document.getElementById("product-name16");
+                                            var productImage = document.getElementById("product-image16");
+                                            var productPrice = document.getElementById("product-price16");
+                                            var productTDP = document.getElementById("product-TDP16");
+
+                                            var product16= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product16", JSON.stringify(product16));
+                                            })
+                                        </script>
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/coolermaster-masterliquid-ml240l-rgb/p/N82E16835103099?Description=CPU%20COOLER&cm_re=CPU_COOLER-_-35-103-099-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Cooler Master MasterLiquid ML240L RGB.jpg" alt="Cooler Master MasterLiquid ML240L RGB" id="product-image17">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name17">Cooler Master MasterLiquid ML240L RGB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>650 - 2000 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>6.5 - 26 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>120 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP17">15W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price17">628 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button17" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button17");
+                                            var productName = document.getElementById("product-name17");
+                                            var productImage = document.getElementById("product-image17");
+                                            var productPrice = document.getElementById("product-price17");
+                                            var productTDP = document.getElementById("product-TDP17");
+
+                                            var product17= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product17", JSON.stringify(product17));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/deepcool-ak620/p/N82E16835856200?Item=N82E16835856200">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/DeepCool AK620.jpg" alt="DeepCool AK620 " id="product-image18">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name18">DeepCool AK620</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>500 - 1850 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>28 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black / Silver</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>160 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP18">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price18">287 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button18" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button18");
+                                            var productName = document.getElementById("product-name18");
+                                            var productImage = document.getElementById("product-image18");
+                                            var productPrice = document.getElementById("product-price18");
+                                            var productTDP = document.getElementById("product-TDP18");
+
+                                            var product18= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product18", JSON.stringify(product18));
+                                            })
+                                        </script>
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/deepcool-gammaxx-400/p/N82E16835856199?Item=N82E16835856199">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/DeepCool AS500 PLUS WH.jpg" alt="DeepCool AS500 PLUS WH" id="product-image19">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name19">DeepCool AS500 PLUS WH</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>500 - 1200 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>31.5 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>White / Silver</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>159 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP19">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price19">288 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button19" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button19");
+                                            var productName = document.getElementById("product-name19");
+                                            var productImage = document.getElementById("product-image19");
+                                            var productPrice = document.getElementById("product-price19");
+                                            var productTDP = document.getElementById("product-TDP19");
+
+                                            var product19= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product19", JSON.stringify(product19));
+                                            })
+                                        </script>
+
+
+                                        <!-------------------------------------------------------------------------------->
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/deepcool-gammaxx-400/p/N82E16835856199?Item=N82E16835856199">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI MAG Series CORELIQUID C240.jpg" alt="MSI MAG Series CORELIQUID C240" id="product-image20">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name20">MSI MAG Series CORELIQUID C240</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__FanRPM">
+                                                <h6 class="specLabel">Fan RPM</h6>
+                                                <p>500 - 2000 RPM</p>
+                                            </td>
+                                            <td class="td__NoiseLevel">
+                                                <h6 class="specLabel">Noise Level</h6>
+                                                <p>	14.3 - 34.3 dB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__RadiatorSize">
+                                                <h6 class="specLabel">Radiator size</h6>
+                                                <p>240 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP20">15W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price20">531 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button20" >Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                             var addBtn = document.getElementById("add-button20");
+                                            var productName = document.getElementById("product-name20");
+                                            var productImage = document.getElementById("product-image20");
+                                            var productPrice = document.getElementById("product-price20");
+                                            var productTDP = document.getElementById("product-TDP20");
+
+                                            var product20= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product20", JSON.stringify(product20));
+                                            })
+                                        </script>
+
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

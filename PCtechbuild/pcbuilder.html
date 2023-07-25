@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="main-wrapper">
+        <div id="partlist">
+            <div class="wrapper wrapper__pagetitle">
+                <section class="main_pagetitle">
+                    <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">PC Builder</h1>
+                </section>
+            </div>
+            <div class="wrapper wrapper__pageContent">
+                <div class="main-content">
+                    <div class="partlist__warapper">
+                        <div class="partlist__metrics">
+                            <div class="partlist__compatibility  ">
+                                <p class="noIssues">
+                                    <svg class="icon shape-success">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </svg>
+
+                                    <span>Compatibility:</span>
+                                     No issues or incompatibilities found.
+                                </p>
+                               <!---- add symbol and change the color from green to red when incompatibility is found------>
+
+                                <script> 
+                                var product6 = JSON.parse(localStorage.getItem("product6"));
+                                var productAMD1 = JSON.parse(localStorage.getItem("product"));
+                                var productAMD2 = JSON.parse(localStorage.getItem("product2"));
+                                var productAMD3 = JSON.parse(localStorage.getItem("product3"));
+                                var productAMD4 = JSON.parse(localStorage.getItem("product8"));
+                                var productAMD5 = JSON.parse(localStorage.getItem("product9"));
+                                const productAMDs = [productAMD1, productAMD2, productAMD3, productAMD4, productAMD5];
+                                var product21 = JSON.parse(localStorage.getItem("product21"));
+                                var product22 = JSON.parse(localStorage.getItem("product22"));
+                                var product23 = JSON.parse(localStorage.getItem("product23"));
+                                var product24 = JSON.parse(localStorage.getItem("product24"));
+                                var product25 = JSON.parse(localStorage.getItem("product25"));
+                                var product27 = JSON.parse(localStorage.getItem("product27"));
+
+                                //loop through the array 
+                                for (let i = 0; i < productAMDs.length; i++) {
+                                    //store the current item in a global variable
+                                    const item = productAMDs[i];
+                                    // 
+                                if(item && product21 || item && product22 || item && product23 || item && product24 || item && product25 || item && product27){
+                                    document.querySelector(".noIssues").style.background = "red";
+                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                } 
+                                
+                            }
+                            if(product6 && product21 || product6 && product22 || product6 && product23 || product6 && product24 || product6 && product25 || product6 && product27){
+                                    document.querySelector(".noIssues").style.background = "red";
+                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                }
+
+                                </script>
+
+
+
+                                <script>
+                                var productAMD1 = JSON.parse(localStorage.getItem("product"));
+                                var productAMD3 = JSON.parse(localStorage.getItem("product3"));
+                                var productAMD4 = JSON.parse(localStorage.getItem("product8"));
+                                var product26 = JSON.parse(localStorage.getItem("product26"));
+
+                                const productAMDs4 = [productAMD1, productAMD3, productAMD4];
+
+                                for (let i = 0; i < productAMDs4.length; i++) {
+                                    //store the current item in a global variable that can be accesed ouside the loop
+                                    const item = productAMDs4[i];
+                                    
+                                if(item && product26){
+                                    document.querySelector(".noIssues").style.background = "red";
+                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                }
+                            }
+                                </script>
+
+                                <script>
+                                var productAMD2 = JSON.parse(localStorage.getItem("product2"));
+                                var productAMD9 = JSON.parse(localStorage.getItem("product9"));
+                                var product28 = JSON.parse(localStorage.getItem("product28"));
+                                var product29 = JSON.parse(localStorage.getItem("product29"));
+                                var product30 = JSON.parse(localStorage.getItem("product30"));
+                                var product35 = JSON.parse(localStorage.getItem("product35"));
+                                var product36 = JSON.parse(localStorage.getItem("product36"));
+                                var product38 = JSON.parse(localStorage.getItem("product38"));
+
+
+                                const productAMDs5 = [productAMD2, productAMD9];
+                                for (let i = 0; i < productAMDs5.length; i++) {
+                                    //store the current item in a global variable that can be accesed ouside the loop
+                                    const item = productAMDs5[i];
+
+                                if(item && product28 || item && product29 || item && product30){
+                                    document.querySelector(".noIssues").style.background = "red";
+                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                }
+
+                            }
+                            if( ((product35||product36 || product38) && product28) || ((product35||product36|| product38) && product29) || ((product35||product36|| product38) && product30)){
+                                    document.querySelector(".noIssues").style.background = "red";
+                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                }
+                            
+                                    </script>
+
+                                    <script>
+                                        var productIntel = JSON.parse(localStorage.getItem("product4"));
+                                        var productIntel2 = JSON.parse(localStorage.getItem("product5"));
+                                        var productIntel3 = JSON.parse(localStorage.getItem("product6"));
+                                        var productIntel4 = JSON.parse(localStorage.getItem("product7"));
+                                        var productIntel5 = JSON.parse(localStorage.getItem("product10"));
+                                        var product28 = JSON.parse(localStorage.getItem("product26"));
+                                        var product28 = JSON.parse(localStorage.getItem("product28"));
+                                        var product29 = JSON.parse(localStorage.getItem("product29"));
+                                        var product30 = JSON.parse(localStorage.getItem("product30"));
+
+                                        const productIntels = [productIntel, productIntel2, productIntel3, productIntel4, productIntel5];
+                                        for (let i = 0; i < productIntels.length; i++) {
+                                            //store the current item in a global variable that can be accesed ouside the loop
+                                            const item = productIntels[i];
+
+                                        if(item && product26 || item && product28 || item && product29 || item && product30){
+                                            document.querySelector(".noIssues").style.background = "red";
+                                            document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                        }
+
+                                    }
+                                            </script>
+
+
+                                            <script>
+                                                productGPU = JSON.parse(localStorage.getItem("product51"));
+                                                product26 = JSON.parse(localStorage.getItem("product26"));
+                                                product61 = JSON.parse(localStorage.getItem("product61"));
+                                                product71 = JSON.parse(localStorage.getItem("product71"));
+                                                product72 = JSON.parse(localStorage.getItem("product72"));
+                                                product73 = JSON.parse(localStorage.getItem("product73"));
+                                                product74 = JSON.parse(localStorage.getItem("product74"));
+                                                product75 = JSON.parse(localStorage.getItem("product75"));
+                                                product76 = JSON.parse(localStorage.getItem("product76"));
+                                                product77 = JSON.parse(localStorage.getItem("product77"));
+                                                product78 = JSON.parse(localStorage.getItem("product78"));
+                                                product79 = JSON.parse(localStorage.getItem("product79"));
+                                                product80 = JSON.parse(localStorage.getItem("product80"));
+
+                                                if(productGPU && product26 || productGPU && product61 || productGPU && product71
+                                                 || productGPU && product72 || productGPU && product73 || productGPU && product74 
+                                                 || productGPU && product75 || productGPU && product76 || productGPU && product77 
+                                                 || productGPU && product78 || productGPU && product79 || productGPU && product80){
+                                                    document.querySelector(".noIssues").style.background = "red";
+                                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                                }
+                                            </script>
+
+
+                                            <script>
+                                                productPowerSupply = JSON.parse(localStorage.getItem("product76"));
+                                                productPowerSupply__2 = JSON.parse(localStorage.getItem("product77"));
+                                                product51 = JSON.parse(localStorage.getItem("product51"));
+                                                product52 = JSON.parse(localStorage.getItem("product52"));
+                                                product53 = JSON.parse(localStorage.getItem("product53"));
+                                                product54 = JSON.parse(localStorage.getItem("product54"));
+                                                product55 = JSON.parse(localStorage.getItem("product55"));
+                                                product56 = JSON.parse(localStorage.getItem("product56"));
+                                                product57 = JSON.parse(localStorage.getItem("product57"));
+                                                product58 = JSON.parse(localStorage.getItem("product58"));
+                                                product59 = JSON.parse(localStorage.getItem("product59"));
+                                                product60 = JSON.parse(localStorage.getItem("product60"));
+
+
+                                                if(productPowerSupply && product51 || productPowerSupply && product52 || productPowerSupply && product53
+                                                 || productPowerSupply && product54 || productPowerSupply && product55 || productPowerSupply && product56 
+                                                 || productPowerSupply && product57 || productPowerSupply && product58 || productPowerSupply && product59 
+                                                 || productPowerSupply && product60 || productPowerSupply__2 && product51 || productPowerSupply__2 && product52 
+                                                 || productPowerSupply__2 && product53 || productPowerSupply__2 && product54 || productPowerSupply__2 && product55 
+                                                 || productPowerSupply__2 && product56 || productPowerSupply__2 && product57 || productPowerSupply__2 && product58 
+                                                 || productPowerSupply__2 && product59 || productPowerSupply__2 && product60){
+                                                    document.querySelector(".noIssues").style.background = "red";
+                                                    document.querySelector(".noIssues").innerHTML = "Compatibility: Incompatibility found";
+                                                }
+
+                                              
+                                            </script>
+                                               
+                                              
+
+
+
+
+                            </div> 
+
+                            <div class="partlist__wattage">
+                                <a href="#" class="action__box">
+                                    <svg class="icon shape-">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </svg>
+                                    <span class="open" id="watt">Estimated Wattage</span> 
+                                </a>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="block__partlist">
+                            <table class="xs-col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="th__component">Component</th>
+                                        <th></th>
+                                        <th class="th__Selection" colspan="2">Selection</th>
+                                        <th class="th__base">TDP</th>
+                                        <th class="th__price">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">CPU</a>
+                                        </td>
+
+
+                                        
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image" style="display: none;">
+                                            <img id="product-image" src="">
+                                        </td>
+                                        <td class="td__name" style="display: none;">
+                                            <span id="product-name">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP" style="display: none;">
+                                            <span id="product-TDP">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price" style="display: none;">
+                                            <span id="product-price">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove" style="display: none;">
+                                            <button id="remove-button">Remove</button>
+                                        </td>
+                                        <!-- when the image, name and price are stored in the local storage display them-->
+                                        <script>
+                                            //product 1
+                                            var product = JSON.parse(localStorage.getItem("product"));
+                                            if(product){
+                                                document.getElementById("product-image").src = product.image;
+                                                document.getElementById("product-name").innerHTML = product.name;
+                                                document.getElementById("product-price").innerHTML = product.price;
+                                                document.getElementById("product-TDP").innerHTML = product.TDP;
+                                               
+                                            }                                             
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product");
+                                                location.reload();
+                                            });
+
+                                    
+
+                                            //prdocut 2
+                                            var product2 = JSON.parse(localStorage.getItem("product2"));
+                                            if(product2)
+                                            {
+                                                document.getElementById("product-image").src = product2.image;
+                                                document.getElementById("product-name").innerHTML = product2.name;
+                                                document.getElementById("product-TDP").innerHTML = product2.TDP;
+                                                document.getElementById("product-price").innerHTML = product2.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product2");
+                                                location.reload();
+                                            });
+
+                                            //product 3
+                                            var product3 = JSON.parse(localStorage.getItem("product3"));
+                                            if(product3)
+                                            {
+                                                document.getElementById("product-image").src = product3.image;
+                                                document.getElementById("product-name").innerHTML = product3.name;
+                                                document.getElementById("product-TDP").innerHTML = product3.TDP;
+                                                document.getElementById("product-price").innerHTML = product3.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product3");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product4 = JSON.parse(localStorage.getItem("product4"));
+                                            if(product4)
+                                            {
+                                                document.getElementById("product-image").src = product4.image;
+                                                document.getElementById("product-name").innerHTML = product4.name;
+                                                document.getElementById("product-TDP").innerHTML = product4.TDP;
+                                                document.getElementById("product-price").innerHTML = product4.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product4");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product5 = JSON.parse(localStorage.getItem("product5"));
+                                            if(product5)
+                                            {
+                                                document.getElementById("product-image").src = product5.image;
+                                                document.getElementById("product-name").innerHTML = product5.name;
+                                                document.getElementById("product-TDP").innerHTML = product5.TDP;
+                                                document.getElementById("product-price").innerHTML = product5.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product5");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product6 = JSON.parse(localStorage.getItem("product6"));
+                                            if(product6)
+                                            {
+                                                document.getElementById("product-image").src = product6.image;
+                                                document.getElementById("product-name").innerHTML = product6.name;
+                                                document.getElementById("product-TDP").innerHTML = product6.TDP;
+                                                document.getElementById("product-price").innerHTML = product6.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product6");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product7 = JSON.parse(localStorage.getItem("product7"));
+                                            if(product7)
+                                            {
+                                                document.getElementById("product-image").src = product7.image;
+                                                document.getElementById("product-name").innerHTML = product7.name;
+                                                document.getElementById("product-TDP").innerHTML = product7.TDP;
+                                                document.getElementById("product-price").innerHTML = product7.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product7");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product8 = JSON.parse(localStorage.getItem("product8"));
+                                            if(product8)
+                                            {
+                                                document.getElementById("product-image").src = product8.image;
+                                                document.getElementById("product-name").innerHTML = product8.name;
+                                                document.getElementById("product-TDP").innerHTML = product8.TDP;
+                                                document.getElementById("product-price").innerHTML = product8.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product8");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product9 = JSON.parse(localStorage.getItem("product9"));
+                                            if(product9)
+                                            {
+                                                document.getElementById("product-image").src = product9.image;
+                                                document.getElementById("product-name").innerHTML = product9.name;
+                                                document.getElementById("product-TDP").innerHTML = product9.TDP;
+                                                document.getElementById("product-price").innerHTML = product9.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product9");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product10 = JSON.parse(localStorage.getItem("product10"));
+                                            if(product10)
+                                            {
+                                                document.getElementById("product-image").src = product10.image;
+                                                document.getElementById("product-name").innerHTML = product10.name;
+                                                document.getElementById("product-TDP").innerHTML = product10.TDP;
+                                                document.getElementById("product-price").innerHTML = product10.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button").addEventListener("click", function(){
+                                                localStorage.removeItem("product10");
+                                                location.reload();
+                                            });
+                                        </script>
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/cpu.html" class="button__add" id="choose">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A CPU
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+
+                                    <!-------------------------------------------------------------------------->
+
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">CPU Cooler</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__2" style="display: none;">
+                                            <img id="product-image__2" src="">
+                                        </td>
+                                        <td class="td__name__2" style="display: none;">
+                                            <span id="product-name__2">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__2" style="display: none;">
+                                            <span id="product-TDP__2">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__2" style="display: none;">
+                                            <span id="product-price__2">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__2" style="display: none;">
+                                            <button id="remove-button__2">Remove</button>
+                                        </td>
+                                        <!-- when the image, name and price are stored in the local storage display them-->
+                                        <script>
+                                            //product 1
+                                            var product11 = JSON.parse(localStorage.getItem("product11"));
+                                            if(product11){
+                                                document.getElementById("product-image__2").src = product11.image;
+                                                document.getElementById("product-name__2").innerHTML = product11.name;
+                                                document.getElementById("product-price__2").innerHTML = product11.price;
+                                                document.getElementById("product-TDP__2").innerHTML = product11.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product11");
+                                                location.reload();
+                                            });
+
+                                            //product 2
+                                            var product12 = JSON.parse(localStorage.getItem("product12"));
+                                            if(product12)
+                                            {
+                                                document.getElementById("product-image__2").src = product12.image;
+                                                document.getElementById("product-name__2").innerHTML = product12.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product12.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product12.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product12");
+                                                location.reload();
+                                            });
+
+                                            //product 3
+
+                                            var product13 = JSON.parse(localStorage.getItem("product13"));
+                                            if(product13)
+                                            {
+                                                document.getElementById("product-image__2").src = product13.image;
+                                                document.getElementById("product-name__2").innerHTML = product13.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product13.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product13.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product13");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product14 = JSON.parse(localStorage.getItem("product14"));
+                                            if(product14)
+                                            {
+                                                document.getElementById("product-image__2").src = product14.image;
+                                                document.getElementById("product-name__2").innerHTML = product14.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product14.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product14.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product14");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product15 = JSON.parse(localStorage.getItem("product15"));
+                                            if(product15)
+                                            {
+                                                document.getElementById("product-image__2").src = product15.image;
+                                                document.getElementById("product-name__2").innerHTML = product15.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product15.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product15.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product15");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product16 = JSON.parse(localStorage.getItem("product16"));
+                                            if(product16)
+                                            {
+                                                document.getElementById("product-image__2").src = product16.image;
+                                                document.getElementById("product-name__2").innerHTML = product16.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product16.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product16.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product16");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product17 = JSON.parse(localStorage.getItem("product17"));
+                                            if(product17)
+                                            {
+                                                document.getElementById("product-image__2").src = product17.image;
+                                                document.getElementById("product-name__2").innerHTML = product17.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product17.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product17.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product17");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product18 = JSON.parse(localStorage.getItem("product18"));
+                                            if(product18)
+                                            {
+                                                document.getElementById("product-image__2").src = product18.image;
+                                                document.getElementById("product-name__2").innerHTML = product18.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product18.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product18.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product18");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product19 = JSON.parse(localStorage.getItem("product19"));
+                                            if(product19)
+                                            {
+                                                document.getElementById("product-image__2").src = product19.image;
+                                                document.getElementById("product-name__2").innerHTML = product19.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product19.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product19.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product19");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product20 = JSON.parse(localStorage.getItem("product20"));
+                                            if(product20)
+                                            {
+                                                document.getElementById("product-image__2").src = product20.image;
+                                                document.getElementById("product-name__2").innerHTML = product20.name;
+                                                document.getElementById("product-TDP__2").innerHTML = product20.TDP;
+                                                document.getElementById("product-price__2").innerHTML = product20.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__2").addEventListener("click", function(){
+                                                localStorage.removeItem("product20");
+                                                location.reload();
+                                            });
+                                        </script>
+
+
+                            
+                                        
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/cpuCooler.html" class="button__add" id="choose__2" >
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A CPU Cooler
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Motherboard</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__3" style="display: none;">
+                                            <img id="product-image__3" src="">
+                                        </td>
+                                        <td class="td__name__3" style="display: none;">
+                                            <span id="product-name__3">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__3" style="display: none;">
+                                            <span id="product-TDP__3">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__3" style="display: none;">
+                                            <span id="product-price__3">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__3" style="display: none;">
+                                            <button id="remove-button__3">Remove</button>
+                                        </td>
+
+                                        <!-- when the image, name and price are stored in the local storage display them-->
+
+                                        <script>
+                                            //product 1
+                                            var product21 = JSON.parse(localStorage.getItem("product21"));
+                                            if(product21){
+                                                document.getElementById("product-image__3").src = product21.image;
+                                                document.getElementById("product-name__3").innerHTML = product21.name;
+                                                document.getElementById("product-price__3").innerHTML = product21.price;
+                                                document.getElementById("product-TDP__3").innerHTML = product21.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product21");
+                                                location.reload();
+                                            });
+
+                                            //product 2
+                                            var product22 = JSON.parse(localStorage.getItem("product22"));
+                                            if(product22)
+                                            {
+                                                document.getElementById("product-image__3").src = product22.image;
+                                                document.getElementById("product-name__3").innerHTML = product22.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product22.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product22.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product22");
+                                                location.reload();
+                                            });
+
+
+                                            //product 3
+                                            var product23 = JSON.parse(localStorage.getItem("product23"));
+                                            if(product23)
+                                            {
+                                                document.getElementById("product-image__3").src = product23.image;
+                                                document.getElementById("product-name__3").innerHTML = product23.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product23.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product23.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product23");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product24 = JSON.parse(localStorage.getItem("product24"));
+                                            if(product24)
+                                            {
+                                                document.getElementById("product-image__3").src = product24.image;
+                                                document.getElementById("product-name__3").innerHTML = product24.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product24.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product24.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product24");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product25 = JSON.parse(localStorage.getItem("product25"));
+                                            if(product25)
+                                            {
+                                                document.getElementById("product-image__3").src = product25.image;
+                                                document.getElementById("product-name__3").innerHTML = product25.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product25.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product25.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product25");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product26 = JSON.parse(localStorage.getItem("product26"));
+                                            if(product26)
+                                            {
+                                                document.getElementById("product-image__3").src = product26.image;
+                                                document.getElementById("product-name__3").innerHTML = product26.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product26.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product26.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product26");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product27 = JSON.parse(localStorage.getItem("product27"));
+                                            if(product27)
+                                            {
+                                                document.getElementById("product-image__3").src = product27.image;
+                                                document.getElementById("product-name__3").innerHTML = product27.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product27.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product27.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product27");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product28 = JSON.parse(localStorage.getItem("product28"));
+                                            if(product28)
+                                            {
+                                                document.getElementById("product-image__3").src = product28.image;
+                                                document.getElementById("product-name__3").innerHTML = product28.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product28.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product28.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product28");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product29 = JSON.parse(localStorage.getItem("product29"));
+                                            if(product29)
+                                            {
+                                                document.getElementById("product-image__3").src = product29.image;
+                                                document.getElementById("product-name__3").innerHTML = product29.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product29.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product29.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product29");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product30 = JSON.parse(localStorage.getItem("product30"));
+                                            if(product30)
+                                            {
+                                                document.getElementById("product-image__3").src = product30.image;
+                                                document.getElementById("product-name__3").innerHTML = product30.name;
+                                                document.getElementById("product-TDP__3").innerHTML = product30.TDP;
+                                                document.getElementById("product-price__3").innerHTML = product30.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__3").addEventListener("click", function(){
+                                                localStorage.removeItem("product30");
+                                                location.reload();
+                                            });
+
+                                        </script>
+
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/Motherboard.html" class="button__add" id="choose__3" >
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Motherboard
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Memory</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__4" style="display: none;">
+                                            <img id="product-image__4" src="">
+                                        </td>
+                                        <td class="td__name__4" style="display: none;">
+                                            <span id="product-name__4">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__4" style="display: none;">
+                                            <span id="product-TDP__4">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__4" style="display: none;">
+                                            <span id="product-price__4">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__4" style="display: none;">
+                                            <button id="remove-button__4">Remove</button>
+                                        </td>
+
+                                        <!-- when the image, name and price are stored in the local storage display them-->
+
+                                        <script>
+                                            //product 1
+                                            var product31 = JSON.parse(localStorage.getItem("product31"));
+                                            if(product31){
+                                                document.getElementById("product-image__4").src = product31.image;
+                                                document.getElementById("product-name__4").innerHTML = product31.name;
+                                                document.getElementById("product-price__4").innerHTML = product31.price;
+                                                document.getElementById("product-TDP__4").innerHTML = product31.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product31");
+                                                location.reload();
+                                            });
+
+                                            //product 2
+                                            var product32 = JSON.parse(localStorage.getItem("product32"));
+                                            if(product32)
+                                            {
+                                                document.getElementById("product-image__4").src = product32.image;
+                                                document.getElementById("product-name__4").innerHTML = product32.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product32.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product32.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product32");
+                                                location.reload();
+                                            });
+
+
+                                            //product 3
+                                            var product33 = JSON.parse(localStorage.getItem("product33"));
+                                            if(product33)
+                                            {
+                                                document.getElementById("product-image__4").src = product33.image;
+                                                document.getElementById("product-name__4").innerHTML = product33.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product33.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product33.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product33");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product34 = JSON.parse(localStorage.getItem("product34"));
+                                            if(product34)
+                                            {
+                                                document.getElementById("product-image__4").src = product34.image;
+                                                document.getElementById("product-name__4").innerHTML = product34.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product34.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product34.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product34");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product35 = JSON.parse(localStorage.getItem("product35"));
+                                            if(product35)
+                                            {
+                                                document.getElementById("product-image__4").src = product35.image;
+                                                document.getElementById("product-name__4").innerHTML = product35.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product35.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product35.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product35");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product36 = JSON.parse(localStorage.getItem("product36"));
+                                            if(product36)
+                                            {
+                                                document.getElementById("product-image__4").src = product36.image;
+                                                document.getElementById("product-name__4").innerHTML = product36.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product36.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product36.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product36");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product37 = JSON.parse(localStorage.getItem("product37"));
+                                            if(product37)
+                                            {
+                                                document.getElementById("product-image__4").src = product37.image;
+                                                document.getElementById("product-name__4").innerHTML = product37.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product37.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product37.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product37");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product38 = JSON.parse(localStorage.getItem("product38"));
+                                            if(product38)
+                                            {
+                                                document.getElementById("product-image__4").src = product38.image;
+                                                document.getElementById("product-name__4").innerHTML = product38.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product38.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product38.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product38");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product39 = JSON.parse(localStorage.getItem("product39"));
+                                            if(product39)
+                                            {
+                                                document.getElementById("product-image__4").src = product39.image;
+                                                document.getElementById("product-name__4").innerHTML = product39.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product39.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product39.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product39");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product40 = JSON.parse(localStorage.getItem("product40"));
+                                            if(product40)
+                                            {
+                                                document.getElementById("product-image__4").src = product40.image;
+                                                document.getElementById("product-name__4").innerHTML = product40.name;
+                                                document.getElementById("product-TDP__4").innerHTML = product40.TDP;
+                                                document.getElementById("product-price__4").innerHTML = product40.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__4").addEventListener("click", function(){
+                                                localStorage.removeItem("product40");
+                                                location.reload();
+                                            });
+
+                                        </script>
+
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/Memory.html" class="button__add" id="choose__4">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Memory
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Storage</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__5" style="display: none;">
+                                            <img id="product-image__5" src="">
+                                        </td>
+                                        <td class="td__name__5" style="display: none;">
+                                            <span id="product-name__5">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__5" style="display: none;">
+                                            <span id="product-TDP__5">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__5" style="display: none;">
+                                            <span id="product-price__5">
+                                                
+                                            </span>
+                                        </td>
+
+                                        <td class="td__remove__5" style="display: none;">
+                                            <button id="remove-button__5">Remove</button>
+                                        </td>
+
+
+                                        <!-- when the image, name and price are stored in the local storage display them--> 
+
+                                        <script>
+                                            //product 1
+                                            var product41 = JSON.parse(localStorage.getItem("product41"));
+                                            if(product41){
+                                                document.getElementById("product-image__5").src = product41.image;
+                                                document.getElementById("product-name__5").innerHTML = product41.name;
+                                                document.getElementById("product-price__5").innerHTML = product41.price;
+                                                document.getElementById("product-TDP__5").innerHTML = product41.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product41");
+                                                location.reload();
+                                            });
+
+                                            //product 2
+                                            var product42 = JSON.parse(localStorage.getItem("product42"));
+                                            if(product42)
+                                            {
+                                                document.getElementById("product-image__5").src = product42.image;
+                                                document.getElementById("product-name__5").innerHTML = product42.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product42.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product42.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product42");
+                                                location.reload();
+                                            });
+
+
+                                            //product 3
+                                            var product43 = JSON.parse(localStorage.getItem("product43"));
+                                            if(product43)
+                                            {
+                                                document.getElementById("product-image__5").src = product43.image;
+                                                document.getElementById("product-name__5").innerHTML = product43.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product43.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product43.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product43");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product44 = JSON.parse(localStorage.getItem("product44"));
+                                            if(product44)
+                                            {
+                                                document.getElementById("product-image__5").src = product44.image;
+                                                document.getElementById("product-name__5").innerHTML = product44.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product44.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product44.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product44");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product45 = JSON.parse(localStorage.getItem("product45"));
+                                            if(product45)
+                                            {
+                                                document.getElementById("product-image__5").src = product45.image;
+                                                document.getElementById("product-name__5").innerHTML = product45.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product45.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product45.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product45");
+                                                location.reload();
+                                            });
+
+                                            
+                                            //product 6
+                                            var product46 = JSON.parse(localStorage.getItem("product46"));
+                                            if(product46)
+                                            {
+                                                document.getElementById("product-image__5").src = product46.image;
+                                                document.getElementById("product-name__5").innerHTML = product46.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product46.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product46.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product46");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product47 = JSON.parse(localStorage.getItem("product47"));
+                                            if(product47)
+                                            {
+                                                document.getElementById("product-image__5").src = product47.image;
+                                                document.getElementById("product-name__5").innerHTML = product47.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product47.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product47.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product47");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product48 = JSON.parse(localStorage.getItem("product48"));
+                                            if(product48)
+                                            {
+                                                document.getElementById("product-image__5").src = product48.image;
+                                                document.getElementById("product-name__5").innerHTML = product48.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product48.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product48.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product48");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product49 = JSON.parse(localStorage.getItem("product49"));
+                                            if(product49)
+                                            {
+                                                document.getElementById("product-image__5").src = product49.image;
+                                                document.getElementById("product-name__5").innerHTML = product49.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product49.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product49.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product49");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product50 = JSON.parse(localStorage.getItem("product50"));
+                                            if(product50)
+                                            {
+                                                document.getElementById("product-image__5").src = product50.image;
+                                                document.getElementById("product-name__5").innerHTML = product50.name;
+                                                document.getElementById("product-TDP__5").innerHTML = product50.TDP;
+                                                document.getElementById("product-price__5").innerHTML = product50.price;
+                                                
+                                            }
+                                            document.getElementById("remove-button__5").addEventListener("click", function(){
+                                                localStorage.removeItem("product50");
+                                                location.reload();
+                                            });
+
+                                        </script>
+
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/Storage.html" class="button__add" id="choose__5">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Storage
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Video Card</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__6" style="display: none;">
+                                            <img id="product-image__6" src="">
+                                        </td>
+                                        <td class="td__name__6" style="display: none;">
+                                            <span id="product-name__6">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__6" style="display: none;">
+                                            <span id="product-TDP__6">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__6" style="display: none;">
+                                            <span id="product-price__6">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__6" style="display: none;">
+                                            <button id="remove-button__6">Remove</button>
+                                        </td>
+
+                                        <!-- when the image, name and price are stored in the local storage display them-->
+
+                                        <script>
+                                            //product 1
+                                            var product51 = JSON.parse(localStorage.getItem("product51"));
+                                            if(product51){
+                                                document.getElementById("product-image__6").src = product51.image;
+                                                document.getElementById("product-name__6").innerHTML = product51.name;
+                                                document.getElementById("product-price__6").innerHTML = product51.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product51.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product51");
+                                                location.reload();
+                                            });
+
+                                            //product 2
+                                            var product52 = JSON.parse(localStorage.getItem("product52"));
+                                            if(product52)
+                                            {
+                                                document.getElementById("product-image__6").src = product52.image;
+                                                document.getElementById("product-name__6").innerHTML = product52.name;
+                                                document.getElementById("product-price__6").innerHTML = product52.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product52.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product52");
+                                                location.reload();
+                                            });
+
+                                            //product 3
+                                            var product53 = JSON.parse(localStorage.getItem("product53"));
+                                            if(product53)
+                                            {
+                                                document.getElementById("product-image__6").src = product53.image;
+                                                document.getElementById("product-name__6").innerHTML = product53.name;
+                                                document.getElementById("product-price__6").innerHTML = product53.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product53.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product53");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product54 = JSON.parse(localStorage.getItem("product54"));
+                                            if(product54)
+                                            {
+                                                document.getElementById("product-image__6").src = product54.image;
+                                                document.getElementById("product-name__6").innerHTML = product54.name;
+                                                document.getElementById("product-price__6").innerHTML = product54.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product54.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product54");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product55 = JSON.parse(localStorage.getItem("product55"));
+                                            if(product55)
+                                            {
+                                                document.getElementById("product-image__6").src = product55.image;
+                                                document.getElementById("product-name__6").innerHTML = product55.name;
+                                                document.getElementById("product-price__6").innerHTML = product55.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product55.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product55");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product56 = JSON.parse(localStorage.getItem("product56"));
+                                            if(product56)
+                                            {
+                                                document.getElementById("product-image__6").src = product56.image;
+                                                document.getElementById("product-name__6").innerHTML = product56.name;
+                                                document.getElementById("product-price__6").innerHTML = product56.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product56.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product56");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product57 = JSON.parse(localStorage.getItem("product57"));
+                                            if(product57)
+                                            {
+                                                document.getElementById("product-image__6").src = product57.image;
+                                                document.getElementById("product-name__6").innerHTML = product57.name;
+                                                document.getElementById("product-price__6").innerHTML = product57.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product57.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product57");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product58 = JSON.parse(localStorage.getItem("product58"));
+                                            if(product58)
+                                            {
+                                                document.getElementById("product-image__6").src = product58.image;
+                                                document.getElementById("product-name__6").innerHTML = product58.name;
+                                                document.getElementById("product-price__6").innerHTML = product58.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product58.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product58");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product59 = JSON.parse(localStorage.getItem("product59"));
+                                            if(product59)
+                                            {
+                                                document.getElementById("product-image__6").src = product59.image;
+                                                document.getElementById("product-name__6").innerHTML = product59.name;
+                                                document.getElementById("product-price__6").innerHTML = product59.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product59.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product59");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product60 = JSON.parse(localStorage.getItem("product60"));
+                                            if(product60)
+                                            {
+                                                document.getElementById("product-image__6").src = product60.image;
+                                                document.getElementById("product-name__6").innerHTML = product60.name;
+                                                document.getElementById("product-price__6").innerHTML = product60.price;
+                                                document.getElementById("product-TDP__6").innerHTML = product60.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__6").addEventListener("click", function(){
+                                                localStorage.removeItem("product60");
+                                                location.reload();
+                                            });
+
+                                            
+
+                                        </script>
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/VideoCard.html" class="button__add"  id="choose__6">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Video Card
+                                            </a>
+                                        </td>
+                                    </tr>
+
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Case</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__7" style="display: none;">
+                                            <img id="product-image__7" src="">
+                                        </td>
+                                        <td class="td__name__7" style="display: none;">
+                                            <span id="product-name__7">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__7" style="display: none;">
+                                            <span id="product-TDP__7">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__7" style="display: none;">
+                                            <span id="product-price__7">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__7" style="display: none;">
+                                            <button id="remove-button__7">Remove</button>
+                                        </td>
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/Case.html" class="button__add" id="choose__7">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Case
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <script>
+                                        //product 1
+                                        var product61 = JSON.parse(localStorage.getItem("product61"));
+                                        if(product61){
+                                            document.getElementById("product-image__7").src = product61.image;
+                                            document.getElementById("product-name__7").innerHTML = product61.name;
+                                            document.getElementById("product-price__7").innerHTML = product61.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product61.TDP;
+                                           
+                                        }
+                                        //remove the product from the local storage
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product61");
+                                            location.reload();
+                                        });
+
+
+                                        //product 2
+                                        var product62 = JSON.parse(localStorage.getItem("product62"));
+                                        if(product62)
+                                        {
+                                            document.getElementById("product-image__7").src = product62.image;
+                                            document.getElementById("product-name__7").innerHTML = product62.name;
+                                            document.getElementById("product-price__7").innerHTML = product62.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product62.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product62");
+                                            location.reload();
+                                        });
+
+
+                                        //product 3
+                                        var product63 = JSON.parse(localStorage.getItem("product63"));
+                                        if(product63)
+                                        {
+                                            document.getElementById("product-image__7").src = product63.image;
+                                            document.getElementById("product-name__7").innerHTML = product63.name;
+                                            document.getElementById("product-price__7").innerHTML = product63.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product63.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product63");
+                                            location.reload();
+                                        });
+
+
+                                        //product 4
+                                        var product64 = JSON.parse(localStorage.getItem("product64"));
+                                        if(product64)
+                                        {
+                                            document.getElementById("product-image__7").src = product64.image;
+                                            document.getElementById("product-name__7").innerHTML = product64.name;
+                                            document.getElementById("product-price__7").innerHTML = product64.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product64.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product64");
+                                            location.reload();
+                                        });
+
+
+                                        //product 5
+                                        var product65 = JSON.parse(localStorage.getItem("product65"));
+                                        if(product65)
+                                        {
+                                            document.getElementById("product-image__7").src = product65.image;
+                                            document.getElementById("product-name__7").innerHTML = product65.name;
+                                            document.getElementById("product-price__7").innerHTML = product65.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product65.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product65");
+                                            location.reload();
+                                        });
+
+
+                                        //product 6
+                                        var product66 = JSON.parse(localStorage.getItem("product66"));
+                                        if(product66)
+                                        {
+                                            document.getElementById("product-image__7").src = product66.image;
+                                            document.getElementById("product-name__7").innerHTML = product66.name;
+                                            document.getElementById("product-price__7").innerHTML = product66.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product66.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product66");
+                                            location.reload();
+                                        });
+
+
+                                        //product 7
+                                        var product67 = JSON.parse(localStorage.getItem("product67"));
+                                        if(product67)
+                                        {
+                                            document.getElementById("product-image__7").src = product67.image;
+                                            document.getElementById("product-name__7").innerHTML = product67.name;
+                                            document.getElementById("product-price__7").innerHTML = product67.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product67.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product67");
+                                            location.reload();
+                                        });
+
+
+
+                                        //product 8
+                                        var product68 = JSON.parse(localStorage.getItem("product68"));
+                                        if(product68)
+                                        {
+                                            document.getElementById("product-image__7").src = product68.image;
+                                            document.getElementById("product-name__7").innerHTML = product68.name;
+                                            document.getElementById("product-price__7").innerHTML = product68.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product68.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product68");
+                                            location.reload();
+                                        });
+
+
+                                        //product 9
+                                        var product69 = JSON.parse(localStorage.getItem("product69"));
+                                        if(product69)
+                                        {
+                                            document.getElementById("product-image__7").src = product69.image;
+                                            document.getElementById("product-name__7").innerHTML = product69.name;
+                                            document.getElementById("product-price__7").innerHTML = product69.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product69.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product69");
+                                            location.reload();
+                                        });
+
+
+
+                                        //product 10
+                                        var product70 = JSON.parse(localStorage.getItem("product70"));
+                                        if(product70)
+                                        {
+                                            document.getElementById("product-image__7").src = product70.image;
+                                            document.getElementById("product-name__7").innerHTML = product70.name;
+                                            document.getElementById("product-price__7").innerHTML = product70.price;
+                                            document.getElementById("product-TDP__7").innerHTML = product70.TDP;
+                                            
+                                        }
+                                        document.getElementById("remove-button__7").addEventListener("click", function(){
+                                            localStorage.removeItem("product70");
+                                            location.reload();
+                                        });
+
+                                    </script>
+
+
+
+                                    <!-------------------------------------------------------------------------->
+                                    <tr class="tr__product">
+                                        <td class="td__component">
+                                            <a href="#">Power Supply</a>
+                                        </td>
+                                        <td class="td__placement--empty"></td>
+                                        <td class="td__image__8" style="display: none;">
+                                            <img id="product-image__8" src="">
+                                        </td>
+                                        <td class="td__name__8" style="display: none;">
+                                            <span id="product-name__8">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__TDP__8" style="display: none;">
+                                            <span id="product-TDP__8">
+
+                                            </span>
+                                        </td>
+                                        <td class="td__price__8" style="display: none;">
+                                            <span id="product-price__8">
+                                                
+                                            </span>
+                                        </td>
+                                        <td class="td__remove__8" style="display: none;">
+                                            <button id="remove-button__8">Remove</button>
+                                        </td>
+
+                                        <script>
+                                            //product 1
+                                            var product71 = JSON.parse(localStorage.getItem("product71"));
+                                            if(product71){
+                                                document.getElementById("product-image__8").src = product71.image;
+                                                document.getElementById("product-name__8").innerHTML = product71.name;
+                                                document.getElementById("product-price__8").innerHTML = product71.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product71.TDP;
+                                               
+                                            }
+                                            //remove the product from the local storage
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product71");
+                                                location.reload();
+                                            });
+
+
+                                            //product 2
+                                            var product72 = JSON.parse(localStorage.getItem("product72"));
+                                            if(product72)
+                                            {
+                                                document.getElementById("product-image__8").src = product72.image;
+                                                document.getElementById("product-name__8").innerHTML = product72.name;
+                                                document.getElementById("product-price__8").innerHTML = product72.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product72.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product72");
+                                                location.reload();
+                                            });
+
+
+                                            //product 3
+                                            var product73 = JSON.parse(localStorage.getItem("product73"));
+                                            if(product73)
+                                            {
+                                                document.getElementById("product-image__8").src = product73.image;
+                                                document.getElementById("product-name__8").innerHTML = product73.name;
+                                                document.getElementById("product-price__8").innerHTML = product73.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product73.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product73");
+                                                location.reload();
+                                            });
+
+
+                                            //product 4
+                                            var product74 = JSON.parse(localStorage.getItem("product74"));
+                                            if(product74)
+                                            {
+                                                document.getElementById("product-image__8").src = product74.image;
+                                                document.getElementById("product-name__8").innerHTML = product74.name;
+                                                document.getElementById("product-price__8").innerHTML = product74.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product74.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product74");
+                                                location.reload();
+                                            });
+
+
+                                            //product 5
+                                            var product75 = JSON.parse(localStorage.getItem("product75"));
+                                            if(product75)
+                                            {
+                                                document.getElementById("product-image__8").src = product75.image;
+                                                document.getElementById("product-name__8").innerHTML = product75.name;
+                                                document.getElementById("product-price__8").innerHTML = product75.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product75.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product75");
+                                                location.reload();
+                                            });
+
+
+                                            //product 6
+                                            var product76 = JSON.parse(localStorage.getItem("product76"));
+                                            if(product76)
+                                            {
+                                                document.getElementById("product-image__8").src = product76.image;
+                                                document.getElementById("product-name__8").innerHTML = product76.name;
+                                                document.getElementById("product-price__8").innerHTML = product76.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product76.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product76");
+                                                location.reload();
+                                            });
+
+
+                                            //product 7
+                                            var product77 = JSON.parse(localStorage.getItem("product77"));
+                                            if(product77)
+                                            {
+                                                document.getElementById("product-image__8").src = product77.image;
+                                                document.getElementById("product-name__8").innerHTML = product77.name;
+                                                document.getElementById("product-price__8").innerHTML = product77.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product77.TDP;
+                                                
+                                            }
+
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product77");
+                                                location.reload();
+                                            });
+
+
+                                            //product 8
+                                            var product78 = JSON.parse(localStorage.getItem("product78"));
+                                            if(product78)
+                                            {
+                                                document.getElementById("product-image__8").src = product78.image;
+                                                document.getElementById("product-name__8").innerHTML = product78.name;
+                                                document.getElementById("product-price__8").innerHTML = product78.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product78.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product78");
+                                                location.reload();
+                                            });
+
+
+                                            //product 9
+                                            var product79 = JSON.parse(localStorage.getItem("product79"));
+                                            if(product79)
+                                            {
+                                                document.getElementById("product-image__8").src = product79.image;
+                                                document.getElementById("product-name__8").innerHTML = product79.name;
+                                                document.getElementById("product-price__8").innerHTML = product79.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product79.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product79");
+                                                location.reload();
+                                            });
+
+
+                                            //product 10
+                                            var product80 = JSON.parse(localStorage.getItem("product80"));
+                                            if(product80)
+                                            {
+                                                document.getElementById("product-image__8").src = product80.image;
+                                                document.getElementById("product-name__8").innerHTML = product80.name;
+                                                document.getElementById("product-price__8").innerHTML = product80.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product80.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product80");
+                                                location.reload();
+                                            });
+
+
+                                            //product 11
+                                            var product81 = JSON.parse(localStorage.getItem("product81"));
+                                            if(product81)
+                                            {
+                                                document.getElementById("product-image__8").src = product81.image;
+                                                document.getElementById("product-name__8").innerHTML = product81.name;
+                                                document.getElementById("product-price__8").innerHTML = product81.price;
+                                                document.getElementById("product-TDP__8").innerHTML = product81.TDP;
+                                                
+                                            }
+                                            document.getElementById("remove-button__8").addEventListener("click", function(){
+                                                localStorage.removeItem("product81");
+                                                location.reload();
+                                            });
+                                        </script>
+
+                                        <td class="td__addComponent" colspan="11">
+                                            <a href="/PCtechbuild/PowerSupply.html" class="button__add" id="choose__8">
+                                                <svg class="icon shape-add">
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </svg>
+                                                Choose A Power Supply
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-------------------------------------------------------------------------->
+
+                                    <tr class="tr__toal tr__total final">
+                                        <td class="td__label" colspan="220">TOTAL:</td>
+                                        <td class="td__price" colspan="1">
+                                            <span id="total-price">
+                                               
+                                            </span>
+                                    </tr>
+
+
+                                    
+                                    <!----when user choose product the total row is displayed instead of hidden and show the total price---->
+                                    <script>
+                                         var total = 0;
+                                        var product = JSON.parse(localStorage.getItem("product"));
+                                        if(product){
+                                            total += parseFloat(product.price);
+                                        }
+                                        var product2 = JSON.parse(localStorage.getItem("product2"));
+                                        if(product2){
+                                            total += parseFloat(product2.price);
+                                        }
+                                        var product3 = JSON.parse(localStorage.getItem("product3"));
+                                        if(product3){
+                                            total += parseFloat(product3.price);
+                                        }
+                                        var product4 = JSON.parse(localStorage.getItem("product4"));
+                                        if(product4){
+                                            total += parseFloat(product4.price);
+                                        }
+                                        var product5 = JSON.parse(localStorage.getItem("product5"));
+                                        if(product5){
+                                            total += parseFloat(product5.price);
+                                        }
+                                        var product6 = JSON.parse(localStorage.getItem("product6"));
+                                        if(product6){
+                                            total += parseFloat(product6.price);
+                                        }
+                                        var product7 = JSON.parse(localStorage.getItem("product7"));
+                                        if(product7){
+                                            total += parseFloat(product7.price);
+                                        }
+                                        var product8 = JSON.parse(localStorage.getItem("product8"));
+                                        if(product8){
+                                            total += parseFloat(product8.price);
+                                        }
+                                        var product9 = JSON.parse(localStorage.getItem("product9"));
+                                        if(product9){
+                                            total += parseFloat(product9.price);
+                                        }
+                                        var product10 = JSON.parse(localStorage.getItem("product10"));
+                                        if(product10){
+                                            total += parseFloat(product10.price);
+                                        }
+                                        var product11 = JSON.parse(localStorage.getItem("product11"));
+                                        if(product11){
+                                            total += parseFloat(product11.price);
+                                        }
+                                        var product12 = JSON.parse(localStorage.getItem("product12"));
+                                        if(product12){
+                                            total += parseFloat(product12.price);
+                                        }
+                                        var product13 = JSON.parse(localStorage.getItem("product13"));
+                                        if(product13){
+                                            total += parseFloat(product13.price);
+                                        }
+                                        var product14 = JSON.parse(localStorage.getItem("product14"));
+                                        if(product14){
+                                            total += parseFloat(product14.price);
+                                        }
+                                        var product15 = JSON.parse(localStorage.getItem("product15"));
+                                        if(product15){
+                                            total += parseFloat(product15.price);
+                                        }
+                                        var product16 = JSON.parse(localStorage.getItem("product16"));
+                                        if(product16){
+                                            total += parseFloat(product16.price);
+                                        }
+                                        var product17 = JSON.parse(localStorage.getItem("product17"));
+                                        if(product17){
+                                            total += parseFloat(product17.price);
+                                        }
+                                        var product18 = JSON.parse(localStorage.getItem("product18"));
+                                        if(product18){
+                                            total += parseFloat(product18.price);
+                                        }
+                                        var product19 = JSON.parse(localStorage.getItem("product19"));
+                                        if(product19){
+                                            total += parseFloat(product19.price);
+                                        }
+                                        var product20 = JSON.parse(localStorage.getItem("product20"));
+                                        if(product20){
+                                            total += parseFloat(product20.price);
+                                        }
+                                        var product21 = JSON.parse(localStorage.getItem("product21"));
+                                        if(product21){
+                                            total += parseFloat(product21.price);
+                                        }
+                                        var product22 = JSON.parse(localStorage.getItem("product22"));
+                                        if(product22){
+                                            total += parseFloat(product22.price);
+                                        }
+                                        var product23 = JSON.parse(localStorage.getItem("product23"));
+                                        if(product23){
+                                            total += parseFloat(product23.price);
+                                        }
+                                        var product24 = JSON.parse(localStorage.getItem("product24"));
+                                        if(product24){
+                                            total += parseFloat(product24.price);
+                                        }
+                                        var product25 = JSON.parse(localStorage.getItem("product25"));
+                                        if(product25){
+                                            total += parseFloat(product25.price);
+                                        }
+                                        var product26 = JSON.parse(localStorage.getItem("product26"));
+                                        if(product26){
+                                            total += parseFloat(product26.price);
+                                        }
+                                        var product27 = JSON.parse(localStorage.getItem("product27"));
+                                        if(product27){
+                                            total += parseFloat(product27.price);
+                                        }
+                                        var product28 = JSON.parse(localStorage.getItem("product28"));
+                                        if(product28){
+                                            total += parseFloat(product28.price);
+                                        }
+                                        var product29 = JSON.parse(localStorage.getItem("product29"));
+                                        if(product29){
+                                            total += parseFloat(product29.price);
+                                        }
+                                        var product30 = JSON.parse(localStorage.getItem("product30"));
+                                        if(product30){
+                                            total += parseFloat(product30.price);
+                                        }
+                                        var product31 = JSON.parse(localStorage.getItem("product31"));
+                                        if(product31){
+                                            total += parseFloat(product31.price);
+                                        }
+                                        var product32 = JSON.parse(localStorage.getItem("product32"));
+                                        if(product32){
+                                            total += parseFloat(product32.price);
+                                        }
+                                        var product33 = JSON.parse(localStorage.getItem("product33"));
+                                        if(product33){
+                                            total += parseFloat(product33.price);
+                                        }
+                                        var product34 = JSON.parse(localStorage.getItem("product34"));
+                                        if(product34){
+                                            total += parseFloat(product34.price);
+                                        }
+                                        var product35 = JSON.parse(localStorage.getItem("product35"));
+                                        if(product35){
+                                            total += parseFloat(product35.price);
+                                        }
+                                        var product36 = JSON.parse(localStorage.getItem("product36"));
+                                        if(product36){
+                                            total += parseFloat(product36.price);
+                                        }
+                                        var product37 = JSON.parse(localStorage.getItem("product37"));
+                                        if(product37){
+                                            total += parseFloat(product37.price);
+                                        }
+                                        var product38 = JSON.parse(localStorage.getItem("product38"));
+                                        if(product38){
+                                            total += parseFloat(product38.price);
+                                        }
+                                        var product39 = JSON.parse(localStorage.getItem("product39"));
+                                        if(product39){
+                                            total += parseFloat(product39.price);
+                                        }
+                                        var product40 = JSON.parse(localStorage.getItem("product40"));
+                                        if(product40){
+                                            total += parseFloat(product40.price);
+                                        }
+                                        var product41 = JSON.parse(localStorage.getItem("product41"));
+                                        if(product41){
+                                            total += parseFloat(product41.price);
+                                        }
+                                        var product42 = JSON.parse(localStorage.getItem("product42"));
+                                        if(product42){
+                                            total += parseFloat(product42.price);
+                                        }
+                                        var product43 = JSON.parse(localStorage.getItem("product43"));
+                                        if(product43){
+                                            total += parseFloat(product43.price);
+                                        }
+                                        var product44 = JSON.parse(localStorage.getItem("product44"));
+                                        if(product44){
+                                            total += parseFloat(product44.price);
+                                        }
+                                        var product45 = JSON.parse(localStorage.getItem("product45"));
+                                        if(product45){
+                                            total += parseFloat(product45.price);
+                                        }
+                                        var product46 = JSON.parse(localStorage.getItem("product46"));
+                                        if(product46){
+                                            total += parseFloat(product46.price);
+                                        }
+                                        var product47 = JSON.parse(localStorage.getItem("product47"));
+                                        if(product47){
+                                            total += parseFloat(product47.price);
+                                        }
+                                        var product48 = JSON.parse(localStorage.getItem("product48"));
+                                        if(product48){
+                                            total += parseFloat(product48.price);
+                                        }
+                                        var product49 = JSON.parse(localStorage.getItem("product49"));
+                                        if(product49){
+                                            total += parseFloat(product49.price);
+                                        }
+                                        var product50 = JSON.parse(localStorage.getItem("product50"));
+                                        if(product50){
+                                            total += parseFloat(product50.price);
+                                        }
+                                        var product51 = JSON.parse(localStorage.getItem("product51"));
+                                        if(product51){
+                                            total += parseFloat(product51.price);
+                                        }
+                                        var product52 = JSON.parse(localStorage.getItem("product52"));
+                                        if(product52){
+                                            total += parseFloat(product52.price);
+                                        }
+                                        var product53 = JSON.parse(localStorage.getItem("product53"));
+                                        if(product53){
+                                            total += parseFloat(product53.price);
+                                        }
+                                        var product54 = JSON.parse(localStorage.getItem("product54"));
+                                        if(product54){
+                                            total += parseFloat(product54.price);
+                                        }
+                                        var product55 = JSON.parse(localStorage.getItem("product55"));
+                                        if(product55){
+                                            total += parseFloat(product55.price);
+                                        }
+                                        var product56 = JSON.parse(localStorage.getItem("product56"));
+                                        if(product56){
+                                            total += parseFloat(product56.price);
+                                        }
+                                        var product57 = JSON.parse(localStorage.getItem("product57"));
+                                        if(product57){
+                                            total += parseFloat(product57.price);
+                                        }
+                                        var product58 = JSON.parse(localStorage.getItem("product58"));
+                                        if(product58){
+                                            total += parseFloat(product58.price);
+                                        }
+                                        var product59 = JSON.parse(localStorage.getItem("product59"));
+                                        if(product59){
+                                            total += parseFloat(product59.price);
+                                        }
+                                        var product60 = JSON.parse(localStorage.getItem("product60"));
+                                        if(product60){
+                                            total += parseFloat(product60.price);
+                                        }
+                                        var product61 = JSON.parse(localStorage.getItem("product61"));
+                                        if(product61){
+                                            total += parseFloat(product61.price);
+                                        }
+                                        var product62 = JSON.parse(localStorage.getItem("product62"));
+                                        if(product62){
+                                            total += parseFloat(product62.price);
+                                        }
+                                        var product63 = JSON.parse(localStorage.getItem("product63"));
+                                        if(product63){
+                                            total += parseFloat(product63.price);
+                                        }
+                                        var product64 = JSON.parse(localStorage.getItem("product64"));
+                                        if(product64){
+                                            total += parseFloat(product64.price);
+                                        }
+                                        var product65 = JSON.parse(localStorage.getItem("product65"));
+                                        if(product65){
+                                            total += parseFloat(product65.price);
+                                        }
+                                        var product66 = JSON.parse(localStorage.getItem("product66"));
+                                        if(product66){
+                                            total += parseFloat(product66.price);
+                                        }
+                                        var product67 = JSON.parse(localStorage.getItem("product67"));
+                                        if(product67){
+                                            total += parseFloat(product67.price);
+                                        }
+                                        var product68 = JSON.parse(localStorage.getItem("product68"));
+                                        if(product68){
+                                            total += parseFloat(product68.price);
+                                        }
+                                        var product69 = JSON.parse(localStorage.getItem("product69"));
+                                        if(product69){
+                                            total += parseFloat(product69.price);
+                                        }
+                                        var product70 = JSON.parse(localStorage.getItem("product70"));
+                                        if(product70){
+                                            total += parseFloat(product70.price);
+                                        }
+                                        var product71 = JSON.parse(localStorage.getItem("product71"));
+                                        if(product71){
+                                            total += parseFloat(product71.price);
+                                        }
+                                        var product72 = JSON.parse(localStorage.getItem("product72"));
+                                        if(product72){
+                                            total += parseFloat(product72.price);
+                                        }
+                                        var product73 = JSON.parse(localStorage.getItem("product73"));
+                                        if(product73){
+                                            total += parseFloat(product73.price);
+                                        }
+                                        var product74 = JSON.parse(localStorage.getItem("product74"));
+                                        if(product74){
+                                            total += parseFloat(product74.price);
+                                        }
+                                        var product75 = JSON.parse(localStorage.getItem("product75"));
+                                        if(product75){
+                                            total += parseFloat(product75.price);
+                                        }
+                                        var product76 = JSON.parse(localStorage.getItem("product76"));
+                                        if(product76){
+                                            total += parseFloat(product76.price);
+                                        }
+                                        var product77 = JSON.parse(localStorage.getItem("product77"));
+                                        if(product77){
+                                            total += parseFloat(product77.price);
+                                        }
+                                        var product78 = JSON.parse(localStorage.getItem("product78"));
+                                        if(product78){
+                                            total += parseFloat(product78.price);
+                                        }
+                                        var product79 = JSON.parse(localStorage.getItem("product79"));
+                                        if(product79){
+                                            total += parseFloat(product79.price);
+                                        }
+                                        var product80 = JSON.parse(localStorage.getItem("product80"));
+                                        if(product80){
+                                            total += parseFloat(product80.price);
+                                        }
+                                        var product81 = JSON.parse(localStorage.getItem("product81"));
+                                        if(product81){
+                                            total += parseFloat(product81.price);
+                                        }
+                                        document.getElementById("total-price").innerHTML = total.toFixed(2) + " SAR" ;
+                                    </script>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="block"></div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="key_metric_dialog" style="display: none;">
+        <div class="modal__container md-col-7 xs-mx-auto">
+            <div class="modal__header">
+                <h2>
+                    <svg class="icon shape-">
+                        <i class="fa-solid fa-bolt"></i>
+                    </svg>
+                    Wattage Breakdown
+                </h2>
+                <a class="modal__close js-hide-modal" href="javascript:">
+                    <svg class="icon shape-close">
+                        <i class="fa-solid fa-times"></i>
+                    </svg>
+                </a>
+            </div>
+            <div class="modal__content">
+                <p>
+                    <b>Note:</b>
+                    Wattages are estimates only. Actual power draw may differ from listed values.
+                </p>
+                <table id="explain_key_metric_table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th class="tc">Wattage</th>
+                        </tr>
+                    </thead>
+                    <tbody> </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td>0W</td>
+                    </tfoot>
+                </table>
+            </div>
+            <script>
+                var total = 0;
+                var product = JSON.parse(localStorage.getItem("product"));
+                if(product){
+                    total += parseFloat(product.TDP);
+                }
+                var product2 = JSON.parse(localStorage.getItem("product2"));
+                if(product2){
+                    total += parseFloat(product2.TDP);
+                }
+                var product3 = JSON.parse(localStorage.getItem("product3"));
+                if(product3){
+                    total += parseFloat(product3.TDP);
+                }
+                var product4 = JSON.parse(localStorage.getItem("product4"));
+                if(product4){
+                    total += parseFloat(product4.TDP);
+                }
+                var product5 = JSON.parse(localStorage.getItem("product5"));
+                if(product5){
+                    total += parseFloat(product5.TDP);
+                }
+                var product6 = JSON.parse(localStorage.getItem("product6"));
+                if(product6){
+                    total += parseFloat(product6.TDP);
+                }
+                var product7 = JSON.parse(localStorage.getItem("product7"));
+                if(product7){
+                    total += parseFloat(product7.TDP);
+                }
+                var product8 = JSON.parse(localStorage.getItem("product8"));
+                if(product8){
+                    total += parseFloat(product8.TDP);
+                }
+                var product9 = JSON.parse(localStorage.getItem("product9"));
+                if(product9){
+                    total += parseFloat(product9.TDP);
+                }
+                var product10 = JSON.parse(localStorage.getItem("product10"));
+                if(product10){
+                    total += parseFloat(product10.TDP);
+                }
+                var product11 = JSON.parse(localStorage.getItem("product11"));
+                if(product11){
+                    total += parseFloat(product11.TDP);
+                }
+                var product12 = JSON.parse(localStorage.getItem("product12"));
+                if(product12){
+                    total += parseFloat(product12.TDP);
+                }
+                var product13 = JSON.parse(localStorage.getItem("product13"));
+                if(product13){
+                    total += parseFloat(product13.TDP);
+                }
+                var product14 = JSON.parse(localStorage.getItem("product14"));
+                if(product14){
+                    total += parseFloat(product14.TDP);
+                }
+                var product15 = JSON.parse(localStorage.getItem("product15"));
+                if(product15){
+                    total += parseFloat(product15.TDP);
+                }
+                var product16 = JSON.parse(localStorage.getItem("product16"));
+                if(product16){
+                    total += parseFloat(product16.TDP);
+                }
+                var product17 = JSON.parse(localStorage.getItem("product17"));
+                if(product17){
+                    total += parseFloat(product17.TDP);
+                }
+                var product18 = JSON.parse(localStorage.getItem("product18"));
+                if(product18){
+                    total += parseFloat(product18.TDP);
+                }
+                var product19 = JSON.parse(localStorage.getItem("product19"));
+                if(product19){
+                    total += parseFloat(product19.TDP);
+                }
+                var product20 = JSON.parse(localStorage.getItem("product20"));
+                if(product20){
+                    total += parseFloat(product20.TDP);
+                }
+                var product21 = JSON.parse(localStorage.getItem("product21"));
+                if(product21){
+                    total += parseFloat(product21.TDP);
+                }
+                var product22 = JSON.parse(localStorage.getItem("product22"));
+                if(product22){
+                    total += parseFloat(product22.TDP);
+                }
+                var product23 = JSON.parse(localStorage.getItem("product23"));
+                if(product23){
+                    total += parseFloat(product23.TDP);
+                }
+                var product24 = JSON.parse(localStorage.getItem("product24"));
+                if(product24){
+                    total += parseFloat(product24.TDP);
+                }
+                var product25 = JSON.parse(localStorage.getItem("product25"));
+                if(product25){
+                    total += parseFloat(product25.TDP);
+                }
+                var product26 = JSON.parse(localStorage.getItem("product26"));
+                if(product26){
+                    total += parseFloat(product26.TDP);
+                }
+                var product27 = JSON.parse(localStorage.getItem("product27"));
+                if(product27){
+                    total += parseFloat(product27.TDP);
+                }
+                var product28 = JSON.parse(localStorage.getItem("product28"));
+                if(product28){
+                    total += parseFloat(product28.TDP);
+                }
+                var product29 = JSON.parse(localStorage.getItem("product29"));
+                if(product29){
+                    total += parseFloat(product29.TDP);
+                }
+                var product30 = JSON.parse(localStorage.getItem("product30"));
+                if(product30){
+                    total += parseFloat(product30.TDP);
+                }
+                var product31 = JSON.parse(localStorage.getItem("product31"));
+                if(product31){
+                    total += parseFloat(product31.TDP);
+                }
+                var product32 = JSON.parse(localStorage.getItem("product32"));
+                if(product32){
+                    total += parseFloat(product32.TDP);
+                }
+                var product33 = JSON.parse(localStorage.getItem("product33"));
+                if(product33){
+                    total += parseFloat(product33.TDP);
+                }
+                var product34 = JSON.parse(localStorage.getItem("product34"));
+                if(product34){
+                    total += parseFloat(product34.TDP);
+                }
+                var product35 = JSON.parse(localStorage.getItem("product35"));
+                if(product35){
+                    total += parseFloat(product35.TDP);
+                }
+                var product36 = JSON.parse(localStorage.getItem("product36"));
+                if(product36){
+                    total += parseFloat(product36.TDP);
+                }
+                var product37 = JSON.parse(localStorage.getItem("product37"));
+                if(product37){
+                    total += parseFloat(product37.TDP);
+                }
+                var product38 = JSON.parse(localStorage.getItem("product38"));
+                if(product38){
+                    total += parseFloat(product38.TDP);
+                }
+                var product39 = JSON.parse(localStorage.getItem("product39"));
+                if(product39){
+                    total += parseFloat(product39.TDP);
+                }
+                var product40 = JSON.parse(localStorage.getItem("product40"));
+                if(product40){
+                    total += parseFloat(product40.TDP);
+                }
+                var product41 = JSON.parse(localStorage.getItem("product41"));
+                if(product41){
+                    total += parseFloat(product41.TDP);
+                }
+                var product42 = JSON.parse(localStorage.getItem("product42"));
+                if(product42){
+                    total += parseFloat(product42.TDP);
+                }
+                var product43 = JSON.parse(localStorage.getItem("product43"));
+                if(product43){
+                    total += parseFloat(product43.TDP);
+                }
+                var product44 = JSON.parse(localStorage.getItem("product44"));
+                if(product44){
+                    total += parseFloat(product44.TDP);
+                }
+                var product45 = JSON.parse(localStorage.getItem("product45"));
+                if(product45){
+                    total += parseFloat(product45.TDP);
+                }
+                var product46 = JSON.parse(localStorage.getItem("product46"));
+                if(product46){
+                    total += parseFloat(product46.TDP);
+                }
+                var product47 = JSON.parse(localStorage.getItem("product47"));
+                if(product47){
+                    total += parseFloat(product47.TDP);
+                }
+                var product48 = JSON.parse(localStorage.getItem("product48"));
+                if(product48){
+                    total += parseFloat(product48.TDP);
+                }
+                var product49 = JSON.parse(localStorage.getItem("product49"));
+                if(product49){
+                    total += parseFloat(product49.TDP);
+                }
+                var product50 = JSON.parse(localStorage.getItem("product50"));
+                if(product50){
+                    total += parseFloat(product50.TDP);
+                }
+                var product51 = JSON.parse(localStorage.getItem("product51"));
+                if(product51){
+                    total += parseFloat(product51.TDP);
+                }
+                var product52 = JSON.parse(localStorage.getItem("product52"));
+                if(product52){
+                    total += parseFloat(product52.TDP);
+                }
+                var product53 = JSON.parse(localStorage.getItem("product53"));
+                if(product53){
+                    total += parseFloat(product53.TDP);
+                }
+                var product54 = JSON.parse(localStorage.getItem("product54"));
+                if(product54){
+                    total += parseFloat(product54.TDP);
+                }
+                var product55 = JSON.parse(localStorage.getItem("product55"));
+                if(product55){
+                    total += parseFloat(product55.TDP);
+                }
+                var product56 = JSON.parse(localStorage.getItem("product56"));
+                if(product56){
+                    total += parseFloat(product56.TDP);
+                }
+                var product57 = JSON.parse(localStorage.getItem("product57"));
+                if(product57){
+                    total += parseFloat(product57.TDP);
+                }
+                var product58 = JSON.parse(localStorage.getItem("product58"));
+                if(product58){
+                    total += parseFloat(product58.TDP);
+                }
+                var product59 = JSON.parse(localStorage.getItem("product59"));
+                if(product59){
+                    total += parseFloat(product59.TDP);
+                }
+                var product60 = JSON.parse(localStorage.getItem("product60"));
+                if(product60){
+                    total += parseFloat(product60.TDP);
+                }
+
+               
+                document.getElementById("explain_key_metric_table").getElementsByTagName("tfoot")[0].getElementsByTagName("td")[1].innerHTML = total + "W";
+            </script>
+        </div>
+    </div>
+    
+    
+
+
+
+    <footer>
+        <div class="footer-content">
+            <h3  style="color: rgb(58, 0, 0);"> <i class="fa-solid fa-gavel"  style="color: rgb(58, 0, 0);"></i> PCtechBuild</h3>
+            <p>Build your own PC with our PC builder tool, or choose from our pre-built PC's or learn how to build from our guides</p>
+            <ul class="footer__links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="build guides.html">Build Guides</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="pcbuilder.html">PC Builder</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2023 PCtechBuild. designed by <span>Faisal & Ahmed</span></p>
+        </div>
+    </footer>
+
+    
+    <script src="pcbuilder.js"> </script>
+</body>
+</html>

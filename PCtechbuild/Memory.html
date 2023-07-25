@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Memory</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Speed</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Modules</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Color</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>First Word Latency</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>CAS Latency</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Corsair-Vengeance-Enthusiast-Illuminated-Memory/dp/B07D1XCKWW/ref=asc_df_B07D1XCKWW/?tag=sashogostdde-21&linkCode=df0&hvadid=452867324121&hvpos=&hvnetw=g&hvrand=242210981026040140&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9076966&hvtargid=pla-491049071721&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Corsair Vengeance RGB PRO 16 GB.jpg" alt="Corsair Vengeance RGB PRO 16 GB" id="product-image31">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name31">Corsair Vengeance RGB PRO 16 GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4-3200 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 8 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>16</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP31">14W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price31">329 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button31" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button31");
+                                           var productName = document.getElementById("product-name31");
+                                           var productImage = document.getElementById("product-image31");
+                                           var productPrice = document.getElementById("product-price31");
+                                           var productTDP = document.getElementById("product-TDP31");
+
+                                           var product31= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product31", JSON.stringify(product31));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 2 -->
+
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820231941?Description=memory&cm_re=memory-_-20-231-941-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Ripjaws V Series 16GB.jpg" alt="G.SKILL Ripjaws V Series 16GB" id="product-image32">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name32">G.SKILL Ripjaws V Series 16GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3200 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 8 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>8.75 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>16</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP32">14W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price32">194 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button32" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button32");
+                                           var productName = document.getElementById("product-name32");
+                                           var productImage = document.getElementById("product-image32");
+                                           var productPrice = document.getElementById("product-price32");
+                                           var productTDP = document.getElementById("product-TDP32");
+
+                                           var product32= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product32", JSON.stringify(product32));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232728?Description=memory&cm_re=memory-_-20-232-728-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Trident Z RGB 16GB.jpg" alt="G.SKILL Trident Z RGB 16GB" id="product-image33">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name33">G.SKILL Trident Z RGB 16GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3600 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 8 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>18</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP33">14W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price33">194 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button33" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button33");
+                                           var productName = document.getElementById("product-name33");
+                                           var productImage = document.getElementById("product-image33");
+                                           var productPrice = document.getElementById("product-price33");
+                                           var productTDP = document.getElementById("product-TDP33");
+
+                                           var product33= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product33", JSON.stringify(product33));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/corsair-32gb-288-pin-ddr4-sdram/p/N82E16820236596?Description=memory&cm_re=memory-_-20-236-596-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/CORSAIR Vengeance LPX 32GB.jpg" alt="CORSAIR Vengeance LPX 32GB" id="product-image34">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name34">CORSAIR Vengeance LPX 32GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3600 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 16 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Yellow</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>18</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP34">29W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price34">409 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button34" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button34");
+                                           var productName = document.getElementById("product-name34");
+                                           var productImage = document.getElementById("product-image34");
+                                           var productPrice = document.getElementById("product-price34");
+                                           var productTDP = document.getElementById("product-TDP34");
+
+                                           var product34= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product34", JSON.stringify(product34));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/corsair-64gb-288-pin-ddr5-sdram/p/N82E16820236848?Description=memory&cm_re=memory-_-20-236-848-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/CORSAIR Vengeance 64GB.jpg" alt="CORSAIR Vengeance 64GB" id="product-image35">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name35">CORSAIR Vengeance 64GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR5 5600 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 32 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Gray</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>15.385 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>40</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP35">50W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price35">1013 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button35" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button35");
+                                           var productName = document.getElementById("product-name35");
+                                           var productImage = document.getElementById("product-image35");
+                                           var productPrice = document.getElementById("product-price35");
+                                           var productTDP = document.getElementById("product-TDP35");
+
+                                           var product35= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product35", JSON.stringify(product35));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-64gb/p/N82E16820374445?Description=memory&cm_re=memory-_-20-374-445-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Trident Z5 Neo RGB Series 64GB.png" alt="G.SKILL Trident Z5 Neo RGB Series 64GB" id="product-image36">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name36">G.SKILL Trident Z5 Neo RGB Series 64GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR5 6000 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 32 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>30</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP36">62W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price36">1325 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button36" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button36");
+                                           var productName = document.getElementById("product-name36");
+                                           var productImage = document.getElementById("product-image36");
+                                           var productPrice = document.getElementById("product-price36");
+                                           var productTDP = document.getElementById("product-TDP36");
+
+                                           var product36= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product36", JSON.stringify(product36));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-128gb-288-pin-ddr4-sdram/p/N82E16820374005?Description=memory&cm_re=memory-_-20-374-005-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Ripjaws V Series 128GB.jpg" alt="G.SKILL Ripjaws V Series 128GB" id="product-image37">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name37">G.SKILL Ripjaws V Series 128GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3600 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>4 x 32 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>18</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP37">116W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price37">1316 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button37" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button37");
+                                           var productName = document.getElementById("product-name37");
+                                           var productImage = document.getElementById("product-image37");
+                                           var productPrice = document.getElementById("product-price37");
+                                           var productTDP = document.getElementById("product-TDP37");
+
+                                           var product37= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product37", JSON.stringify(product37));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-32gb/p/N82E16820374433?Description=memory&cm_re=memory-_-20-374-433-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Trident Z5 RGB Series 32GB.png" alt="G.SKILL Trident Z5 RGB Series 32GB" id="product-image38">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name38">G.SKILL Trident Z5 RGB Series 32GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR5 6800 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 16 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Silver</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>34</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP38">31W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price38">806 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button38" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button38");
+                                           var productName = document.getElementById("product-name38");
+                                           var productImage = document.getElementById("product-image38");
+                                           var productPrice = document.getElementById("product-price38");
+                                           var productTDP = document.getElementById("product-TDP38");
+
+                                           var product38= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product38", JSON.stringify(product38));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-32gb/p/N82E16820374433?Description=memory&cm_re=memory-_-20-374-433-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Ripjaws V Series 32GB.jpg" alt="G.SKILL Ripjaws V Series 32GB" id="product-image39">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name39">G.SKILL Ripjaws V Series 32GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3200 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 16 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Red</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10.556 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>16</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP39">29W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price39">323 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button39" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button39");
+                                           var productName = document.getElementById("product-name39");
+                                           var productImage = document.getElementById("product-image39");
+                                           var productPrice = document.getElementById("product-price39");
+                                           var productTDP = document.getElementById("product-TDP39");
+
+                                           var product39= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product39", JSON.stringify(product39));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232884?Description=memory&cm_re=memory-_-20-232-884-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/G.SKILL Aegis 16GB.jpg" alt="G.SKILL Aegis 16GB" id="product-image40">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name40">G.SKILL Aegis 16GB</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Speed">
+                                                <h6 class="specLabel">Speed</h6>
+                                                <p>DDR4 3200 MHz</p>
+                                            </td>
+                                            <td class="td__Modules">
+                                                <h6 class="specLabel">Modules</h6>
+                                                <p>2 x 8 GB</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Red</p>
+                                            </td>
+                                            <td class="td__FirstWordLatency">
+                                                <h6 class="specLabel">First Word Latency</h6>
+                                                <p>10 ns</p>
+                                            </td>
+                                            <td class="td__CASLatency">
+                                                <h6 class="specLabel">CAS Latency</h6>
+                                                <p>16</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP40">14W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price40">175 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button40" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button40");
+                                           var productName = document.getElementById("product-name40");
+                                           var productImage = document.getElementById("product-image40");
+                                           var productPrice = document.getElementById("product-price40");
+                                           var productTDP = document.getElementById("product-TDP40");
+
+                                           var product40= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product40", JSON.stringify(product40));
+                                           })
+                                        </script>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

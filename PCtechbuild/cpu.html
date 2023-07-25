@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a CPU</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Cores</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Performance Core Clock </p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Performance Boost Clock</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="6" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Intergrated graphics: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p> Intergrated graphics</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/amd-ryzen-7-5800x/p/N82E16819113665?Description=AMD%20CPU&cm_re=AMD_CPU-_-19-113-665-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/amd Ryzen 5 5500.jpg" alt="AMD Ryzen 5 5500" id="product-image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name">AMD Ryzen 7 5800X</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__cores">
+                                                <h6 class="specLabel">Core Count</h6>
+                                                <p>8</p>
+                                            </td>
+                                            <td class="td__performanceCoreClock">
+                                                <h6 class="specLabel">Performance Core Clock</h6>
+                                                <p>3.8 GHz</p>
+                                            </td>
+                                            <td class="td__performanceBoostClock">
+                                                <h6 class="specLabel">Performance Boost Clock</h6>
+                                                <p>4.7 GHz</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP">105W</p>
+                                            </td>
+                                            <td class="td__integratedGraphics">
+                                                <h6 class="specLabel">Integrated Graphics</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price">1118 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button" >Add</button>
+                                            </a>
+                                            </td>
+                                        </tr>
+                                        <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                        <script>
+                                            var addBtn = document.getElementById("add-button");
+                                            var productName = document.getElementById("product-name");
+                                            var productImage = document.getElementById("product-image");
+                                            var productPrice = document.getElementById("product-price");
+                                            var productTDP = document.getElementById("product-TDP");
+
+                                            var product= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product", JSON.stringify(product));
+                                            })
+                                        </script>
+
+                                       
+                                    
+                                      
+                                 
+
+
+                                        <!-- 2nd product -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/amd-ryzen-9-7950x-ryzen-9-7000-series/p/N82E16819113771?Description=AMD%20CPU&cm_re=AMD_CPU-_-19-113-771-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/AMD RYZEN 9.jpg" alt="AMD Ryzen 9 7950X"  id="product-image2" >
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name2">AMD Ryzen 9 7950X</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__cores">
+                                                <h6 class="specLabel">Core Count</h6>
+                                                <p>16</p>
+                                            </td>
+                                            <td class="td__performanceCoreClock">
+                                                <h6 class="specLabel">Performance Core Clock</h6>
+                                                <p>4.5 GHz</p>
+                                            </td>
+                                            <td class="td__performanceBoostClock">
+                                                <h6 class="specLabel">Performance Boost Clock</h6>
+                                                <p>5.7 GHz</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP2">170W</p>
+                                            </td>
+                                            <td class="td__integratedGraphics">
+                                                <h6 class="specLabel">Integrated Graphics</h6>
+                                                <p>AMD Radeon Graphics</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price2">2999 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html"> 
+                                                <button class="btn btn--small btn--add" id="add-button2" >Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        <!--  
+                                        <script>
+                                            var productPrice61 = document.getElementById("product-price61");
+                                            var productID61 = "B096JF2JT5";
+                                            var url = "https://api.rainforestapi.com/request?api_key=7d1a0f8d7f0b4d4e9e2c2a2d0b2c1b1f&type=product&amazon_domain=amazon.sa&asin=" + productID61;
+                                            var request = new XMLHttpRequest();
+                                            request.open("GET", url);
+                                            request.responseType = "json";
+                                            request.send();
+                                            request.onload = function(){
+                                                var data = request.response;
+                                                var price = data.product.price;
+                                                productPrice61.textContent = price;
+                                            }
+                                        </script>
+                                        -->
+
+
+
+                                    
+                                         <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                         <script>
+                                            var addBtn = document.getElementById("add-button2");
+                                            var productName = document.getElementById("product-name2");
+                                            var productImage = document.getElementById("product-image2");
+                                            var productPrice = document.getElementById("product-price2");
+                                            var productTDP = document.getElementById("product-TDP2");
+                                            var product2= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product2", JSON.stringify(product2));
+                                            })
+                                        </script>
+                                        
+
+
+                                        <!-- 3rd product -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/amd-ryzen-5-5600-ryzen-5-5000-series/p/N82E16819113736?Description=AMD%20CPU&cm_re=AMD_CPU-_-19-113-736-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/AMD RYZEN 5 5000.jpg" alt="AMD Ryzen 5 5600" id="product-image3">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name3">AMD Ryzen 5 5600</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__cores">
+                                                <h6 class="specLabel">Core Count</h6>
+                                                <p>6</p>
+                                            </td>
+                                            <td class="td__performanceCoreClock">
+                                                <h6 class="specLabel">Performance Core Clock</h6>
+                                                <p>3.5 GHz</p>
+                                            </td>
+                                            <td class="td__performanceBoostClock">
+                                                <h6 class="specLabel">Performance Boost Clock</h6>
+                                                <p>4.4 GHz</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP3">65W</p>
+                                            </td>
+                                            <td class="td__integratedGraphics">
+                                                <h6 class="specLabel">Integrated Graphics</h6>
+                                                <p>AMD Radeon Graphics</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price3">649 SAR</p>
+                                              <a href="/PCtechbuild/pcbuilder.html"> 
+                                                <button class="btn btn--small btn--add" id="add-button3">Add</button>  
+                                              </a> 
+                                            </td>
+                                        </tr>
+
+
+                                         <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                         <script>
+                                            var addBtn = document.getElementById("add-button3");
+                                            var productName = document.getElementById("product-name3");
+                                            var productImage = document.getElementById("product-image3");
+                                            var productPrice = document.getElementById("product-price3");
+                                            var productTDP = document.getElementById("product-TDP3");
+                                            var product3= {
+                                                name: productName.textContent,
+                                                image: productImage.src,
+                                                price: productPrice.textContent,
+                                                TDP: productTDP.textContent
+                                            }
+                                            addBtn.addEventListener("click", function(){
+                                                localStorage.setItem("product3", JSON.stringify(product3));
+                                            })
+                                        </script>
+
+
+
+                                        <!-- 4th product -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/intel-core-i9-13900k-core-i9-13th-gen/p/N82E16819118412?Description=Intel%20cpu&cm_re=Intel_cpu-_-19-118-412-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Intel i 9.jpg" alt="Intel Core i9-13900K" id="product-image4">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name4">Intel Core i9-13900K</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__cores">
+                                                <h6 class="specLabel">Core Count</h6>
+                                                <p>24</p>
+                                            </td>
+                                            <td class="td__performanceCoreClock">
+                                                <h6 class="specLabel">Performance Core Clock</h6>
+                                                <p>3.0 GHz</p>
+                                            </td>
+                                            <td class="td__performanceBoostClock">
+                                                <h6 class="specLabel">Performance Boost Clock</h6>
+                                                <p>5.7 GHz</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP4">125W</p>
+                                            </td>
+                                            <td class="td__integratedGraphics">
+                                                <h6 class="specLabel">Integrated Graphics</h6>
+                                                <p>Intel UHD Graphics 770</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price4">2621 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html"> 
+                                                <button class="btn btn--small btn--add" id="add-button4">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+                                            
+                                             <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                             <script>
+                                                var addBtn = document.getElementById("add-button4");
+                                                var productName = document.getElementById("product-name4");
+                                                var productImage = document.getElementById("product-image4");
+                                                var productPrice = document.getElementById("product-price4");
+                                                var productTDP = document.getElementById("product-TDP4");
+                                                var product4= {
+                                                    name: productName.textContent,
+                                                    image: productImage.src,
+                                                    price: productPrice.textContent,
+                                                    TDP: productTDP.textContent
+                                                }
+                                                addBtn.addEventListener("click", function(){
+                                                    localStorage.setItem("product4", JSON.stringify(product4));
+                                                })
+                                            </script>
+
+
+
+                                            <!-- 5th product -->
+                                            <tr class="tr__product product-id-005" data-pb-id="005">
+                                                <td class="td__name">
+                                                    <a href="https://www.newegg.com/global/sa-en/intel-core-i5-13600k-core-i5-13th-gen/p/N82E16819118416?Description=Intel%20cpu&cm_re=Intel_cpu-_-19-118-416-_-Product&quicklink=true">
+                                                        <div class="td__imageWrapper">
+                                                            <div class="td__image">
+                                                                <img src="/PCtechbuild/images/Intel Core i5-13600K.jpg" alt="Intel Core i5-13600K" id="product-image5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="td__nameWrapper">
+                                                            <p id="product-name5">Intel Core i5-13600K</p>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td class="td__cores">
+                                                    <h6 class="specLabel">Core Count</h6>
+                                                    <p>14</p>
+                                                </td>
+                                                <td class="td__performanceCoreClock">
+                                                    <h6 class="specLabel">Performance Core Clock</h6>
+                                                    <p>3.5 GHz</p>
+                                                </td>
+                                                <td class="td__performanceBoostClock">
+                                                    <h6 class="specLabel">Performance Boost Clock</h6>
+                                                    <p>5.1 GHz</p>
+                                                </td>
+                                                <td class="td__tdp">
+                                                    <h6 class="specLabel">TDP</h6>
+                                                    <p id="product-TDP5">125W</p>
+                                                </td>
+                                                <td class="td__integratedGraphics">
+                                                    <h6 class="specLabel">Integrated Graphics</h6>
+                                                    <p>Intel UHD Graphics 770</p>
+                                                </td>
+                                                <td class="td__price">
+                                                    <p id="product-price5">1471 SAR</p>
+                                                    <a href="/PCtechbuild/pcbuilder.html"> 
+                                                    <button class="btn btn--small btn--add" id="add-button5">Add</button>  
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                                
+                                                 <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                 <script>
+                                                    var addBtn = document.getElementById("add-button5");
+                                                    var productName = document.getElementById("product-name5");
+                                                    var productImage = document.getElementById("product-image5");
+                                                    var productPrice = document.getElementById("product-price5");
+                                                    var productTDP = document.getElementById("product-TDP5");
+                                                    var product5= {
+                                                        name: productName.textContent,
+                                                        image: productImage.src,
+                                                        price: productPrice.textContent,
+                                                        TDP: productTDP.textContent
+                                                    }
+                                                    addBtn.addEventListener("click", function(){
+                                                        localStorage.setItem("product5", JSON.stringify(product5));
+                                                    })
+                                                </script>
+
+                                                <!-- 6th product -->
+                                                <tr class="tr__product product-id-006" data-pb-id="006">
+                                                    <td class="td__name">
+                                                        <a href="https://www.newegg.com/global/sa-en/intel-core-i7-11700k-core-i7-11th-gen/p/N82E16819118233?Description=Intel%20cpu&cm_re=Intel_cpu-_-19-118-233-_-Product">
+                                                            <div class="td__imageWrapper">
+                                                                <div class="td__image">
+                                                                    <img src="/PCtechbuild/images/Intel Core i7-11700K.jpg" alt="Intel Core i7-11700K" id="product-image6">
+                                                                </div>
+                                                            </div>
+                                                            <div class="td__nameWrapper">
+                                                                <p id="product-name6">Intel Core i7-11700K</p>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td class="td__cores">
+                                                        <h6 class="specLabel">Core Count</h6>
+                                                        <p>8</p>
+                                                    </td>
+                                                    <td class="td__performanceCoreClock">
+                                                        <h6 class="specLabel">Performance Core Clock</h6>
+                                                        <p>3.6 GHz</p>
+                                                    </td>
+                                                    <td class="td__performanceBoostClock">
+                                                        <h6 class="specLabel">Performance Boost Clock</h6>
+                                                        <p>5.0 GHz</p>
+                                                    </td>
+                                                    <td class="td__tdp">
+                                                        <h6 class="specLabel">TDP</h6>
+                                                        <p id="product-TDP6">125W</p>
+                                                    </td>
+                                                    <td class="td__integratedGraphics">
+                                                        <h6 class="specLabel">Integrated Graphics</h6>
+                                                        <p>Intel UHD Graphics 770</p>
+                                                    </td>
+                                                    <td class="td__price">
+                                                        <p id="product-price6">1275 SAR</p>
+                                                        <a href="/PCtechbuild/pcbuilder.html"> 
+                                                        <button class="btn btn--small btn--add" id="add-button6">Add</button>  
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                    
+                                                     <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                     <script>
+                                                        var addBtn = document.getElementById("add-button6");
+                                                        var productName = document.getElementById("product-name6");
+                                                        var productImage = document.getElementById("product-image6");
+                                                        var productPrice = document.getElementById("product-price6");
+                                                        var productTDP = document.getElementById("product-TDP6");
+                                                        var product6= {
+                                                            name: productName.textContent,
+                                                            image: productImage.src,
+                                                            price: productPrice.textContent,
+                                                            TDP: productTDP.textContent
+                                                        }
+                                                        addBtn.addEventListener("click", function(){
+                                                            localStorage.setItem("product6", JSON.stringify(product6));
+                                                        })
+                                                    </script>
+
+
+
+                                                    <!-- 7th product -->
+                                                    <tr class="tr__product product-id-007" data-pb-id="007">
+                                                        <td class="td__name">
+                                                            <a href="https://www.newegg.com/global/sa-en/intel-core-i3-12100f-core-i3-12th-gen/p/N82E16819118357?Description=Intel%20cpu&cm_re=Intel_cpu-_-19-118-357-_-Product">
+                                                                <div class="td__imageWrapper">
+                                                                    <div class="td__image">
+                                                                        <img src="/PCtechbuild/images/Intel Core i3-12100F.jpg" alt="Intel Core i3-12100F" id="product-image7">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="td__nameWrapper">
+                                                                    <p id="product-name7">Intel Core i3-12100F</p>
+                                                                </div>
+                                                            </a>
+                                                        </td>
+                                                        <td class="td__cores">
+                                                            <h6 class="specLabel">Core Count</h6>
+                                                            <p>4</p>
+                                                        </td>
+                                                        <td class="td__performanceCoreClock">
+                                                            <h6 class="specLabel">Performance Core Clock</h6>
+                                                            <p>3.3 GHz</p>
+                                                        </td>
+                                                        <td class="td__performanceBoostClock">
+                                                            <h6 class="specLabel">Performance Boost Clock</h6>
+                                                            <p>4.3 GHz</p>
+                                                        </td>
+                                                        <td class="td__tdp">
+                                                            <h6 class="specLabel">TDP</h6>
+                                                            <p id="product-TDP7">58W</p>
+                                                        </td>
+                                                        <td class="td__integratedGraphics">
+                                                            <h6 class="specLabel">Integrated Graphics</h6>
+                                                            <p>None</p>
+                                                        </td>
+                                                        <td class="td__price">
+                                                            <p id="product-price7">461 SAR</p>
+                                                            <a href="/PCtechbuild/pcbuilder.html"> 
+                                                            <button class="btn btn--small btn--add" id="add-button7">Add</button>  
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                        
+                                                         <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                         <script>
+                                                            var addBtn = document.getElementById("add-button7");
+                                                            var productName = document.getElementById("product-name7");
+                                                            var productImage = document.getElementById("product-image7");
+                                                            var productPrice = document.getElementById("product-price7");
+                                                            var productTDP = document.getElementById("product-TDP7");
+                                                            var product7= {
+                                                                name: productName.textContent,
+                                                                image: productImage.src,
+                                                                price: productPrice.textContent,
+                                                                TDP: productTDP.textContent
+                                                            }
+                                                            addBtn.addEventListener("click", function(){
+                                                                localStorage.setItem("product7", JSON.stringify(product7));
+                                                            })
+                                                        </script>
+
+
+
+                                                        <!-- 8th product -->
+                                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                                            <td class="td__name">
+                                                                <a href="https://www.newegg.com/global/sa-en/amd-ryzen-5-5600x/p/N82E16819113666?Description=AMD%20CPU&cm_re=AMD_CPU-_-19-113-666-_-Product">
+                                                                    <div class="td__imageWrapper">
+                                                                        <div class="td__image">
+                                                                            <img src="/PCtechbuild/images/AMD Ryzen 5 5600X.jpg" alt="AMD Ryzen 5 5600X" id="product-image8">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="td__nameWrapper">
+                                                                        <p id="product-name8">AMD Ryzen 5 5600X</p>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="td__cores">
+                                                                <h6 class="specLabel">Core Count</h6>
+                                                                <p>6</p>
+                                                            </td>
+                                                            <td class="td__performanceCoreClock">
+                                                                <h6 class="specLabel">Performance Core Clock</h6>
+                                                                <p>3.7 GHz</p>
+                                                            </td>
+                                                            <td class="td__performanceBoostClock">
+                                                                <h6 class="specLabel">Performance Boost Clock</h6>
+                                                                <p>4.6 GHz</p>
+                                                            </td>
+                                                            <td class="td__tdp">
+                                                                <h6 class="specLabel">TDP</h6>
+                                                                <p id="product-TDP8">65W</p>
+                                                            </td>
+                                                            <td class="td__integratedGraphics">
+                                                                <h6 class="specLabel">Integrated Graphics</h6>
+                                                                <p>None</p>
+                                                            </td>
+                                                            <td class="td__price">
+                                                                <p id="product-price8">778 SAR</p>
+                                                                <a href="/PCtechbuild/pcbuilder.html"> 
+                                                                <button class="btn btn--small btn--add" id="add-button8">Add</button>  
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                            
+                                                             <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                             <script>
+                                                                var addBtn = document.getElementById("add-button8");
+                                                                var productName = document.getElementById("product-name8");
+                                                                var productImage = document.getElementById("product-image8");
+                                                                var productPrice = document.getElementById("product-price8");
+                                                                var productTDP = document.getElementById("product-TDP8");
+                                                                var product8= {
+                                                                    name: productName.textContent,
+                                                                    image: productImage.src,
+                                                                    price: productPrice.textContent,
+                                                                    TDP: productTDP.textContent
+                                                                }
+                                                                addBtn.addEventListener("click", function(){
+                                                                    localStorage.setItem("product8", JSON.stringify(product8));
+                                                                })
+                                                            </script>
+
+
+
+                                                            <!-- 9th product -->
+                                                            <tr class="tr__product product-id-009" data-pb-id="009">
+                                                                <td class="td__name">
+                                                                    <a href="https://www.newegg.com/global/sa-en/amd-ryzen-9-7950x3d-ryzen-9-7000-series/p/N82E16819113791?Description=CPU&cm_re=CPU-_-19-113-791-_-Product">
+                                                                        <div class="td__imageWrapper">
+                                                                            <div class="td__image">
+                                                                                <img src="/PCtechbuild/images/AMD Ryzen 9 7950X3D.png" alt="AMD Ryzen 9 7950X3D" id="product-image9">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="td__nameWrapper">
+                                                                            <p id="product-name9">AMD Ryzen 9 7950X3D</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </td>
+                                                                <td class="td__cores">
+                                                                    <h6 class="specLabel">Core Count</h6>
+                                                                    <p>16</p>
+                                                                </td>
+                                                                <td class="td__performanceCoreClock">
+                                                                    <h6 class="specLabel">Performance Core Clock</h6>
+                                                                    <p>4.2 GHz</p>
+                                                                </td>
+                                                                <td class="td__performanceBoostClock">
+                                                                    <h6 class="specLabel">Performance Boost Clock</h6>
+                                                                    <p>5.7 GHz</p>
+                                                                </td>
+                                                                <td class="td__tdp">
+                                                                    <h6 class="specLabel">TDP</h6>
+                                                                    <p id="product-TDP9">120W</p>
+                                                                </td>
+                                                                <td class="td__integratedGraphics">
+                                                                    <h6 class="specLabel">Integrated Graphics</h6>
+                                                                    <p>AMD Radeon Graphics</p>
+                                                                </td>
+                                                                <td class="td__price">
+                                                                    <p id="product-price9">3214 SAR</p>
+                                                                    <a href="/PCtechbuild/pcbuilder.html"> 
+                                                                    <button class="btn btn--small btn--add" id="add-button9">Add</button>  
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                                
+                                                                 <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                                 <script>
+                                                                    var addBtn = document.getElementById("add-button9");
+                                                                    var productName = document.getElementById("product-name9");
+                                                                    var productImage = document.getElementById("product-image9");
+                                                                    var productPrice = document.getElementById("product-price9");
+                                                                    var productTDP = document.getElementById("product-TDP9");
+                                                                    var product9= {
+                                                                        name: productName.textContent,
+                                                                        image: productImage.src,
+                                                                        price: productPrice.textContent,
+                                                                        TDP: productTDP.textContent
+                                                                    }
+                                                                    addBtn.addEventListener("click", function(){
+                                                                        localStorage.setItem("product9", JSON.stringify(product9));
+                                                                    })
+                                                                </script>
+
+
+
+                                                                <!-- 10th product -->
+                                                                <tr class="tr__product product-id-010" data-pb-id="010">
+                                                                    <td class="td__name">
+                                                                        <a href="https://www.newegg.com/global/sa-en/amd-ryzen-9-5950x/p/N82E16819113667?Description=AMD%20CPU&cm_re=AMD_CPU-_-19-113-667-_-Product">
+                                                                            <div class="td__imageWrapper">
+                                                                                <div class="td__image">
+                                                                                    <img src="/PCtechbuild/images/Intel Core i9-12900K.jpg" alt="Intel Core i9-12900K" id="product-image10">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="td__nameWrapper">
+                                                                                <p id="product-name10">Intel Core i9-12900K</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="td__cores">
+                                                                        <h6 class="specLabel">Core Count</h6>
+                                                                        <p>16</p>
+                                                                    </td>
+                                                                    <td class="td__performanceCoreClock">
+                                                                        <h6 class="specLabel">Performance Core Clock</h6>
+                                                                        <p>3.2 GHz</p>
+                                                                    </td>
+                                                                    <td class="td__performanceBoostClock">
+                                                                        <h6 class="specLabel">Performance Boost Clock</h6>
+                                                                        <p>5.2 GHz</p>
+                                                                    </td>
+                                                                    <td class="td__tdp">
+                                                                        <h6 class="specLabel">TDP</h6>
+                                                                        <p id="product-TDP10">125W</p>
+                                                                    </td>
+                                                                    <td class="td__integratedGraphics">
+                                                                        <h6 class="specLabel">Integrated Graphics</h6>
+                                                                        <p>Intel UHD Graphics 770</p>
+                                                                    </td>
+                                                                    <td class="td__price">
+                                                                        <p id="product-price10">1965 SAR</p>
+                                                                        <a href="/PCtechbuild/pcbuilder.html"> 
+                                                                        <button class="btn btn--small btn--add" id="add-button10">Add</button>  
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                    
+                                                                     <!-- store image, name and price in local storage when add button clicked and display them on the table -->
+                                                                     <script>
+                                                                        var addBtn = document.getElementById("add-button10");
+                                                                        var productName = document.getElementById("product-name10");
+                                                                        var productImage = document.getElementById("product-image10");
+                                                                        var productPrice = document.getElementById("product-price10");
+                                                                        var productTDP = document.getElementById("product-TDP10");
+                                                                        var product10= {
+                                                                            name: productName.textContent,
+                                                                            image: productImage.src,
+                                                                            price: productPrice.textContent,
+                                                                            TDP: productTDP.textContent
+                                                                        }
+                                                                        addBtn.addEventListener("click", function(){
+                                                                            localStorage.setItem("product10", JSON.stringify(product10));
+                                                                        })
+                                                                    </script>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

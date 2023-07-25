@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
+</head>
+<body> 
+  <section class="hidden">
+    <a href="index2.html"><button class="btn" style="position: absolute; bottom: 96%;">Home</button></a>
+    <div class="container">
+      <table class="bp-part-list" border="4">
+        <thead>
+          <tr>
+            <th colspan="3"><p> Mid Range 108p PC - intel Build </p></th>
+          </tr>
+        </thead>
+      
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bp-part-list-type">CPU</td>
+                <td class="bp-part-list-item">Intel Core i7-12700KF</td>
+                <td class="bp-part-list-price">1331</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">Motherboard</td>
+                <td class="bp-part-list-item">ASRock Z690 Extreme WiFi 6E</td>
+                <td class="bp-part-list-price">738.95</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">GPU</td>
+                <td class="bp-part-list-item">MSI RTX 3070 Ti Ventus 3X OC</td>
+                <td class="bp-part-list-price">3082</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">RAM</td>
+                <td class="bp-part-list-item">OLOy Blade RGB 32 GB DDR4-3600 CL18</td>
+                <td class="bp-part-list-price">307.56</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">Storage</td>
+                <td class="bp-part-list-item">Silicon Power P34A80 1 TB</td>
+                <td class="bp-part-list-price">206.28</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">PSU</td>
+                <td class="bp-part-list-item">Corsair RMx (2021) 750 W 80+ Gold</td>
+                <td class="bp-part-list-price">450.11</td>
+              </tr>
+              <tr>
+                <td class="bp-part-list-type">Cooler</td>
+                <td class="bp-part-list-item">be quiet! Dark Rock Pro 4</td>
+                <td class="bp-part-list-price">337.23</td>
+              </tr>
+          
+      
+             <tr>
+            <td class="bp-part-list-type">Case</td>
+             <td class="bp-part-list-item">Corsair 4000D Airflow</td>
+             <td class="bp-part-list-price">356.33</td>
+            </tr>
+          <tr>
+            <td
+              colspan="2" class="bp-part-list-total">Total
+            </td>
+            <td class="bp-part-list-total-price">6,809.46 SAR</td>
+          </tr>
+         
+        </tbody>
+      </table>
+      </div>
+      
+  </section>
+
+<section class="hidden">
+ 
+  <div class="container reveal" >
+    <canvas id="myChart" style="width:100%;max-width:600px">
+      <div id="detail-history" class="price-history-container" data-product="6ee9423e-f36b-1410-8bb1-003fe7c988bc" data-currency="SAR " style="padding: 0px; position: relative;">
+                                    
+        <canvas class="flot-base" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+        <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+          <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 47px; text-align: center;">Dec 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 129px; text-align: center;">Dec 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 218px; text-align: center;">Jan 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 300px; text-align: center;">Jan 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 387px; text-align: center;">Feb 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 464px; text-align: center;">Feb 15</div>
+          </div>
+          <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 263px; left: 2px; text-align: right;">SAR 1800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 220px; left: 2px; text-align: right;">SAR 2000</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 176px; left: 2px; text-align: right;">SAR 2200</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 132px; left: 2px; text-align: right;">SAR 2400</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 88px; left: 2px; text-align: right;">SAR 2600</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 44px; left: 2px; text-align: right;">SAR 2800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">SAR 3000</div>
+          </div>
+        </div>
+        <canvas class="flot-overlay" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+      </div>
+    
+    </canvas>
+  </div>
+
+  <div class="container reveal">
+    <canvas id="myChart2" style="width:100%;max-width:600px">
+      <div id="detail-history" class="price-history-container" data-product="9742433e-f36b-1410-8bb0-003fe7c988bc" data-currency="SAR " style="padding: 0px; position: relative;">
+                                      
+        <canvas class="flot-base" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;">
+        </canvas>
+        <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+          <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 47px; text-align: center;">Dec 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 129px; text-align: center;">Dec 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 218px; text-align: center;">Jan 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 300px; text-align: center;">Jan 16</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 387px; text-align: center;">Feb 01</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 61px; top: 279px; left: 464px; text-align: center;">Feb 15</div>
+          </div>
+          <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;">
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 263px; left: 2px; text-align: right;">SAR 740</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 211px; left: 2px; text-align: right;">SAR 760</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 158px; left: 2px; text-align: right;">SAR 780</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 106px; left: 2px; text-align: right;">SAR 800</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 53px; left: 2px; text-align: right;">SAR 820</div>
+            <div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">SAR 840</div>
+          </div>
+        </div>
+        <canvas class="flot-overlay" width="554" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 554.984px; height: 300px;"></canvas>
+      </div>
+      </canvas>
+  </div>
+</section>
+
+
+
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var chart = new Chart(document.getElementById("myChart"), {
+      type: 'line',
+      data: {
+        labels: ["Feb 01", "Feb 15", "Mar 01", "Mar 16", "Apr 01", "Apr 16"],
+        datasets: [{
+          data: [3082,3082, 3082,3082, 3082, 3082],
+          label: "Newegg Saudi Arabia",
+          borderColor: "#edc240",
+          fill: false
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'GPU Price History (SAR)'
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  });
+
+
+  </script>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var chart = new Chart(document.getElementById("myChart2"), {
+      type: 'line',
+      data: {
+        labels: ["Feb 01", "Feb 15", "Mar 01", "Mar 16", "Apr 01", "Apr 16"],
+        datasets: [{
+          data: [1357,1357, 1357, 1357, 1357, 1331],
+          label: "Newegg Saudi Arabia",
+          borderColor: "#edc240",
+          fill: false
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'CPU Price History (SAR)'
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+    window.addEventListener('scroll', reveal);
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+
+        
+    }
+  
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else{
+                entry.target.classList.remove('show');
+                
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(element => {
+        observer.observe(element);
+    });
+        
+    
+</script>
+
+<div class="container " style="padding-top:10vh">
+  <h1 class="reveal">Below are benchmarks tested for productivity reasons for the pc above to see the pc performance. SCROLL DOWN</h1>
+  <h2 class="reveal">Benchmarks</h2>
+<div class="bench reveal">
+  <div class="gpubench_benchmark">
+    <b>Performance Rating</b>
+    <span style="font-size:0.8em"> - 3DMark 11 + Fire Strike + Time Spy</span>
+  </div>
+  
+  <div  style="clear:both;">
+    
+    <div class="paintAB_bar_sur" style="line-height:12px">
+  
+      <div class="bb_2" style="background-color:#141414; width:37%;height:12px">
+      </div>
+      <div class="bb_4" style="width:0.5%;height:12px; left: 37%">
+      </div>
+      <div class="bb_5" style="width:29%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">64 pt</span> (65%) </div>
+      
+  </div>
+</div>
+ <br>
+ <br>
+
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Time Spy Score
+   
+    
+    <div class="paintAB_bar_sur" style="line-height:12px">
+      
+      <div  class="bb_2" style="background-color:#141414; width:31.5%;height:12px" >
+      </div>
+      
+      <div class="bb_4" style="width:0.5%;height:12px; left:31.5%">
+      </div>
+      <div class="bb_5" style="width:34.5%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">15076 Points</span> (46%) </div>
+  </div>
+  <br>
+ <br>
+
+
+  <div class="gpubench_benchmark">
+   </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Time Spy Graphics
+    <div class="paintAB_bar_sur" style="line-height:12px">
+      <div class="bb_2" style="background-color:#0a0a0a; width:27.5%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:27.5%"></div>
+      <div class="bb_5" style="width:38.5%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">14783 Points </span> (40%) </div>
+  </div>
+  <br>
+ <br>
+
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Fire Strike Standard Score
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#141414; width:36.5%;height:12px">
+      </div>
+      <div class="bb_4" style="width:0.5%;height:12px; left: 36.5%">
+      </div>
+      <div class="bb_5" style="width:29.5%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">36017 Points</span> (64%) </div>
+  </div>
+  <br>
+ <br>
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DMark Fire Strike Standard Graphics
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:29%;height:12px;border-left:1px solid #afafaf"></div>
+    <div class="bb_4" style="width:0.4%;height:12px; left:29%"></div>
+    <div class="bb_5" style="width:37%;height:12px">
+    </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">37663 Points</span> (43%) </div>
+  </div>  
+  <br>
+ <br>
+  <div class="gpubench_benchmark">
+    </div>
+  <div class='bench reveal' style="clear:both;">
+    <b>3DMark</b> - 3DM11 Performance GPU
+    <div class="paintAB_bar_sur" style="line-height:14px">
+      
+      <div class="bb_2" style="background-color:#0a0a0a; width:29%;height:12px;border-left:1px solid #afafaf"></div>
+      <div class="bb_4" style="width:0.4%;height:12px; left:29%"></div>
+      <div class="bb_5" style="width:37%;height:12px">
+      </div>
+      <div class="tooltip">&#x1F6C8;
+        <span class="tooltiptext"></span>
+      </div>
+    </div>
+    <div class="paintAB_legend">
+      <span style="color:#000;">49760 Points</span> (43%) </div>
+  </div> 
+  <br>
+ <br>
+
+
+
+<div class="gpubench_benchmark">
+</div>
+<div class='bench reveal' style="clear:both;">
+<b>Peak Temperature</b>
+<div class="paintAB_bar_sur" style="line-height:12px">
+  
+  <div class="bb_2" style="background-color:#0a0a0a; width:54%;height:12px;border-left:1px solid #afafaf"></div>
+  <div class="bb_4" style="width:0.4%;height:12px; left:54%"></div>
+  <div class="bb_5" style="width:11%;height:12px">
+  </div>
+  <div class="tooltip">&#x1F6C8;
+    <span class="tooltiptext"></span>
+  </div>
+</div>
+<div class="paintAB_legend">
+  <span style="color:#000;">96.2°C</span> (95%)
+ </div>
+</div> 
+<br>
+<br>
+<div class='bench reveal' style="clear:both;">
+  <b>Peak Power Consumption</b>
+  <div class="paintAB_bar_sur" style="line-height:12px">
+    
+    <div class="bb_2" style="background-color:#141414; width:38%;height:12px">
+    </div>
+    <div class="bb_4" style="width:0.5%;height:12px; left: 38%">
+    </div>
+    <div class="bb_5" style="width:28%;height:12px">
+    </div>
+    <div class="tooltip">&#x1F6C8;
+      <span class="tooltiptext"></span>
+    </div>
+  </div>
+  <div class="paintAB_legend">
+    <span style="color:#000;">472 Watt</span> (67%)
+   </div>
+  </div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div> 
+</body>
+</html>

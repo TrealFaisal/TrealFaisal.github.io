@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Video Card</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Chipset</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Memory</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Core Clock</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Boost Clock</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Length</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/MSI-Tri-Frozr-Lovelace-Architecture-Graphics/dp/B0BG959RCF/ref=sr_1_1?crid=TFWGG0JBD00L&keywords=4090&qid=1677641940&sprefix=4090%2Caps%2C225&sr=8-1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI Gaming GeForce RTX 4090.jpg" alt="MSI Gaming GeForce RTX 4090" id="product-image51">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name51">MSI Gaming GeForce RTX 4090</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>GeForce RTX 4090 24GB</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>24 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p> 2.5 GHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>2.7 GHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>337.00 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP51">850W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price51">8183 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button51">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button51");
+                                           var productName = document.getElementById("product-name51");
+                                           var productImage = document.getElementById("product-image51");
+                                           var productPrice = document.getElementById("product-price51");
+                                           var productTDP = document.getElementById("product-TDP51");
+
+                                           var product51= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product51", JSON.stringify(product51));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/gigabyte-geforce-rtx-3070-ti-gv-n307tgaming-oc-8g/p/N82E16814932443?Description=GPU&cm_re=GPU-_-14-932-443-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/GIGABYTE Gaming OC.jpg" alt="GIGABYTE Gaming OC" id="product-image52">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name52">GIGABYTE Gaming OC</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	GeForce RTX 3070 Ti</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>8 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>1575 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>1830 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>320 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP52">290W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price52">2943 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button52">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button52");
+                                           var productName = document.getElementById("product-name52");
+                                           var productImage = document.getElementById("product-image52");
+                                           var productPrice = document.getElementById("product-price52");
+                                           var productTDP = document.getElementById("product-TDP52");
+
+                                           var product52= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product52", JSON.stringify(product52));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asus-geforce-rtx-3060-ti-tuf-rtx3060ti-o8gd6x-gaming/p/N82E16814126620?Description=GPU&cm_re=GPU-_-14-126-620-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS TUF Gaming NVIDIA OC Edition.jpg" alt="ASUS TUF Gaming NVIDIA OC Edition" id="product-image53">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name53">ASUS TUF Gaming NVIDIA OC Edition</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	GeForce RTX 3060 Ti</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>8 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	1410 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>1755 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>302 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP53">225W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price53">2207 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button53">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button53");
+                                           var productName = document.getElementById("product-name53");
+                                           var productImage = document.getElementById("product-image53");
+                                           var productPrice = document.getElementById("product-price53");
+                                           var productTDP = document.getElementById("product-TDP53");
+
+                                           var product53= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product53", JSON.stringify(product53));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/sapphire-radeon-rx-6700-xt-11306-02-20g/p/N82E16814202400?Description=GPU&cm_re=GPU-_-14-202-400-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Sapphire Pulse AMD.jpg" alt="Sapphire Pulse AMD" id="product-image54">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name54">Sapphire Pulse AMD</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>Radeon RX 6700 XT</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>12 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>2321 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2581 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>260 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP54">230W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price54">1749 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button54">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button54");
+                                           var productName = document.getElementById("product-name54");
+                                           var productImage = document.getElementById("product-image54");
+                                           var productPrice = document.getElementById("product-price54");
+                                           var productTDP = document.getElementById("product-TDP54");
+
+                                           var product54= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product54", JSON.stringify(product54));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/zotac-geforce-rtx-3070-ti-zt-a30710q-10p/p/N82E16814500547?Description=GPU&cm_re=GPU-_-14-500-547-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ZOTAC GAMING TRINITY.jpg" alt="ZOTAC GAMING TRINITY" id="product-image55">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name55">ZOTAC GAMING TRINITY</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>GeForce RTX 3070 Ti </p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>8 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	1575 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	1770 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>	318 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP55">320W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price55">2531 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button55">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button55");
+                                           var productName = document.getElementById("product-name55");
+                                           var productImage = document.getElementById("product-image55");
+                                           var productPrice = document.getElementById("product-price55");
+                                           var productTDP = document.getElementById("product-TDP55");
+
+                                           var product55= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product55", JSON.stringify(product55));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asrock-radeon-rx-6650-xt-rx6650xt-cld-8go/p/N82E16814930070?Description=GPU&cm_re=GPU-_-14-930-070-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASRock Challenger D.jpg" alt="ASRock Challenger D OC" id="product-image56">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name56">ASRock Challenger D OC</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	Radeon RX 6650 XT</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>8 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	2055 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2669 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>269 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP56">176W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price56">1195 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button56">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button56");
+                                           var productName = document.getElementById("product-name56");
+                                           var productImage = document.getElementById("product-image56");
+                                           var productPrice = document.getElementById("product-price56");
+                                           var productTDP = document.getElementById("product-TDP56");
+
+                                           var product56= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product56", JSON.stringify(product56));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/msi-geforce-rtx-4070-ti-rtx-4070-ti-gaming-x-trio-white-12g/p/N82E16814137786?Description=GPU&cm_re=GPU-_-14-137-786-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI Gaming X TRIO.jpg" alt="MSI Gaming X TRIO" id="product-image57">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name57">MSI Gaming X TRIO</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>GeForce RTX 4070 Ti</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>12 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	2310 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2760 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>337 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP57">285W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price57">4184 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button57">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button57");
+                                           var productName = document.getElementById("product-name57");
+                                           var productImage = document.getElementById("product-image57");
+                                           var productPrice = document.getElementById("product-price57");
+                                           var productTDP = document.getElementById("product-TDP57");
+
+                                           var product57= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product57", JSON.stringify(product57));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->  
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/msi-rx-6750-xt-mech-2x-12g-oc/p/N82E16814137735?Description=GPU&cm_re=GPU-_-14-137-735-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI Mech 2X OC.jpg" alt="MSI Mech 2X OC" id="product-image58">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name58">MSI Mech 2X OC</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	Radeon RX 6750 XT</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>12 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	2150 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2618 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>249 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP58">250W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price58">1933 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button58">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button58");
+                                           var productName = document.getElementById("product-name58");
+                                           var productImage = document.getElementById("product-image58");
+                                           var productPrice = document.getElementById("product-price58");
+                                           var productTDP = document.getElementById("product-TDP58");
+
+                                           var product58= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product58", JSON.stringify(product58));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asrock-radeon-rx-6800-xt-rx6800xt-tcx-16go/p/N82E16814930050?Description=GPU&cm_re=GPU-_-14-930-050-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASRock Taichi.jpg" alt="ASRock Taichi" id="product-image59">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name59">ASRock Taichi</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	Radeon RX 6800 XT</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>16 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	1925 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2360 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>330 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP59">300W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price59">2667 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button59">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button59");
+                                           var productName = document.getElementById("product-name59");
+                                           var productImage = document.getElementById("product-image59");
+                                           var productPrice = document.getElementById("product-price59");
+                                           var productTDP = document.getElementById("product-TDP59");
+
+                                           var product59= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product59", JSON.stringify(product59));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/gigabyte-gv-r665xtgaming-oc-8gd/p/N82E16814932520?Description=GPU&cm_re=GPU-_-14-932-520-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/GIGABYTE Gaming OC2.jpg" alt="GIGABYTE Gaming OC" id="product-image60">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name60">GIGABYTE Gaming OC</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Chipset">
+                                                <h6 class="specLabel">Chipset</h6>
+                                                <p>	Radeon RX 6650 XT</p>
+                                            </td>
+                                            <td class="td__Memory">
+                                                <h6 class="specLabel">Memory</h6>
+                                                <p>8 GB</p>
+                                            </td>
+                                            <td class="td__CoreClock">
+                                                <h6 class="specLabel">Core Clock</h6>
+                                                <p>	2055 MHz</p>
+                                            </td>
+                                            <td class="td__BoostClock">
+                                                <h6 class="specLabel">Boost Clock</h6>
+                                                <p>	2694 MHz</p>
+                                            </td>
+                                            <td class="td__Length">
+                                                <h6 class="specLabel">Length</h6>
+                                                <p>282 mm</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP60">176W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price60">1358 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button60">Add</button>  
+                                                 </a>  
+                                            </td>
+                                        </tr>
+                                        
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button60");
+                                           var productName = document.getElementById("product-name60");
+                                           var productImage = document.getElementById("product-image60");
+                                           var productPrice = document.getElementById("product-price60");
+                                           var productTDP = document.getElementById("product-TDP60");
+
+                                           var product60= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product60", JSON.stringify(product60));
+                                           })
+                                        </script>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

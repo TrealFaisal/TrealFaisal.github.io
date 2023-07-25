@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Power Supply</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Type</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Effiency Rating</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Modular</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Color</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/1HU-00J7-009P6?Description=Asus%20ROG%20Strix%201000W%2080%20Plus%20Gold%20Power%20Supply&cm_re=Asus_ROG%20Strix%201000W%2080%20Plus%20Gold%20Power%20Supply-_-9SIAYTVHF08449-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Asus ROG Strix.jpg" alt="Asus ROG Strix" id="product-image71">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name71">Asus ROG Strix</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP71">1000W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price71">1237 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button71" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button71");
+                                           var productName = document.getElementById("product-name71");
+                                           var productImage = document.getElementById("product-image71");
+                                           var productPrice = document.getElementById("product-price71");
+                                           var productTDP = document.getElementById("product-TDP71");
+
+                                           var product71= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product71", JSON.stringify(product71));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/evga-supernova-850-g5-220-g5-0850-x1-850w/p/N82E16817438161?Description=power%20supply&cm_re=power_supply-_-17-438-161-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/EVGA SuperNOVA 850 G5.jpg" alt="EVGA SuperNOVA 850 G5" id="product-image72">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name72">EVGA SuperNOVA 850 G5</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Green</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP72">850W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price72">620 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button72" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button72");
+                                           var productName = document.getElementById("product-name72");
+                                           var productImage = document.getElementById("product-image72");
+                                           var productPrice = document.getElementById("product-price72");
+                                           var productTDP = document.getElementById("product-TDP72");
+
+                                           var product72= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product72", JSON.stringify(product72));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/evga-supernova-750-g5-220-g5-0750-x1-750w/p/N82E16817438160?Description=power%20supply&cm_re=power_supply-_-17-438-160-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Seasonic FOCUS GX-1000.jpg" alt="Seasonic FOCUS GX-1000" id="product-image73">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name73">Seasonic FOCUS GX-1000</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP73">1000W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price73">884 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button73" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button73");
+                                           var productName = document.getElementById("product-name73");
+                                           var productImage = document.getElementById("product-image73");
+                                           var productPrice = document.getElementById("product-price73");
+                                           var productTDP = document.getElementById("product-TDP73");
+
+                                           var product73= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product73", JSON.stringify(product73));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/evga-supernova-650-gt-220-gt-0650-y1-650w/p/N82E16817438186?Description=power%20supply%20600w&cm_re=power_supply%20600w-_-17-438-186-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/EVGA SuperNOVA 650 GT.jpg" alt="EVGA SuperNOVA 650 GT" id="product-image74">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name74">EVGA SuperNOVA 650 GT</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP74">650W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price74">443 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button74" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button74");
+                                           var productName = document.getElementById("product-name74");
+                                           var productImage = document.getElementById("product-image74");
+                                           var productPrice = document.getElementById("product-price74");
+                                           var productTDP = document.getElementById("product-TDP74");
+
+                                           var product74= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product74", JSON.stringify(product74));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/seasonic-focus-plus-750-platinum-ssr-750px-750w/p/N82E16817151191">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/seasonic FOCUS PX-750.jpg" alt="seasonic FOCUS PX-750" id="product-image75">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name75">seasonic FOCUS PX-750</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP75">750W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price75">799 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button75" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button75");
+                                           var productName = document.getElementById("product-name75");
+                                           var productImage = document.getElementById("product-image75");
+                                           var productPrice = document.getElementById("product-price75");
+                                           var productTDP = document.getElementById("product-TDP75");
+
+                                           var product75= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product75", JSON.stringify(product75));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asus-tuf-gaming-550b-550w/p/N82E16817320010?Description=power%20supply%20550w&cm_re=power_supply%20550w-_-9SIAYTVJEA7781-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS TUF GAMING 550W Bronze PSU.jpg" alt="ASUS TUF GAMING 550W Bronze PSU" id="product-image76">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name76">ASUS TUF GAMING 550W Bronze PSU</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Bronze</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>No</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP76">550W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price76">1099 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button76" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button76");
+                                           var productName = document.getElementById("product-name76");
+                                           var productImage = document.getElementById("product-image76");
+                                           var productPrice = document.getElementById("product-price76");
+                                           var productTDP = document.getElementById("product-TDP76");
+
+                                           var product76= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product76", JSON.stringify(product76));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/evga-450-br-100-br-0450-k1-450w/p/N82E16817438144?Description=power%20supply%20450w&cm_re=power_supply%20450w-_-17-438-144-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/EVGA 450 BR.jpg" alt="EVGA 450 BR" id="product-image77">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name77">EVGA 450 BR</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Bronze</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>No</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP77">450W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price77">278 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button77" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button77");
+                                           var productName = document.getElementById("product-name77");
+                                           var productImage = document.getElementById("product-image77");
+                                           var productPrice = document.getElementById("product-price77");
+                                           var productTDP = document.getElementById("product-TDP77");
+
+                                           var product77= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product77", JSON.stringify(product77));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/msi-mpg-a650gf-650w/p/N82E16817701011?Description=MSI%20-%20MPG%20A650GF%20650&cm_re=MSI_-%20MPG%20A650GF%20650-_-17-701-011-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI - MPG A650GF.jpg" alt="MSI - MPG A650GF" id="product-image78">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name78">MSI - MPG A650GF</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP78">650W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price78">473 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button78" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button78");
+                                           var productName = document.getElementById("product-name78");
+                                           var productImage = document.getElementById("product-image78");
+                                           var productPrice = document.getElementById("product-price78");
+                                           var productTDP = document.getElementById("product-TDP78");
+
+                                           var product78= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product78", JSON.stringify(product78));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/1HU-01U5-00024?Description=power%20supply%20600w%20asus&cm_re=power_supply%20600w%20asus-_-9SIAM4SJ4D8886-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Zeus GAMDIAS RGB Gaming PC Power Supply.jpg" alt="Zeus GAMDIAS RGB Gaming PC Power Supply" id="product-image79">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name79">Zeus GAMDIAS RGB Gaming PC Power Supply</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP79">650W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price79">1122 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button79" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button79");
+                                           var productName = document.getElementById("product-name79");
+                                           var productImage = document.getElementById("product-image79");
+                                           var productPrice = document.getElementById("product-price79");
+                                           var productTDP = document.getElementById("product-TDP79");
+
+                                           var product79= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product79", JSON.stringify(product79));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/seasonic-focus-sgx-650-650w/p/N82E16817151253?Description=power%20supply%20650w&cm_re=power_supply%20650w-_-17-151-253-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Seasonic Focus SGX-650(2021).jpg" alt="Seasonic Focus SGX-650(2021)" id="product-image80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name80">Seasonic Focus SGX-650(2021)</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP80">650W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price80">663 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button80" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button80");
+                                           var productName = document.getElementById("product-name80");
+                                           var productImage = document.getElementById("product-image80");
+                                           var productPrice = document.getElementById("product-price80");
+                                           var productTDP = document.getElementById("product-TDP80");
+
+                                           var product80= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product80", JSON.stringify(product80));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 11 -->
+                                        <tr class="tr__product product-id-011" data-pb-id="011">
+                                            <td class="td__name">
+                                                <a href="">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/EVGA SuperNOVA 1600 G+.jpg" alt="EVGA SuperNOVA 1600 G+" id="product-image81">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name81">EVGA SuperNOVA 1600 G+</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__EffiencyRating">
+                                                <h6 class="specLabel">Effiency Rating</h6>
+                                                <p>80 Plus Gold</p>
+                                            </td>
+                                            <td class="td__Modular">
+                                                <h6 class="specLabel">Modular</h6>
+                                                <p>Full</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP81">1600W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price81">1371 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button81" >Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button81");
+                                           var productName = document.getElementById("product-name81");
+                                           var productImage = document.getElementById("product-image81");
+                                           var productPrice = document.getElementById("product-price81");
+                                           var productTDP = document.getElementById("product-TDP81");
+
+                                           var product81= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product81", JSON.stringify(product81));
+                                           })
+                                        </script>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

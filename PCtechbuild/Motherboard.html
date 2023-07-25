@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Motherboard</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>CPU socket</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Form Factor </p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Memory Max</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Memory Slots</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Color</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/ASUS-B660-PLUS-D4-Motherboard-Thunderbolt/dp/B09NWDQ1TH/ref=asc_df_B09NWDQ1TH/?tag=sashogostdde-21&linkCode=df0&hvadid=452950369873&hvpos=&hvnetw=g&hvrand=15573198583572555348&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9076966&hvtargid=pla-1625812273884&psc=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS Prime B660-PLUS D4 LGA 1700.jpg" alt="ASUS Prime B660-PLUS D4 LGA 1700" id="product-image21">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name21">ASUS Prime B660-PLUS D4 LGA 1700</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p class="LGA_1700">LGA 1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>128GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP21">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price21">633 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button21" >Add</button>    
+                                                 </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button21");
+                                           var productName = document.getElementById("product-name21");
+                                           var productImage = document.getElementById("product-image21");
+                                           var productPrice = document.getElementById("product-price21");
+                                           var productTDP = document.getElementById("product-TDP21");
+
+                                           var product21= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product21", JSON.stringify(product21));
+                                           })
+                                       </script>
+
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16813145417?Description=motherboard&cm_re=motherboard-_-13-145-417-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/GIGABYTE Z790 AORUS ELITE AX.jpg" alt="GIGABYTE Z790 AORUS ELITE AX" id="product-image22">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name22">GIGABYTE Z790 AORUS ELITE AX</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p class="LGA_1700">LGA 1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>192GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP22">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price22">1218 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button22">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button22");
+                                           var productName = document.getElementById("product-name22");
+                                           var productImage = document.getElementById("product-image22");
+                                           var productPrice = document.getElementById("product-price22");
+                                           var productTDP = document.getElementById("product-TDP22");
+
+                                           var product22= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product22", JSON.stringify(product22));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asus-rog-maximus-z790-hero/p/N82E16813119597?Description=motherboard&cm_re=motherboard-_-13-119-597-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS ROG Maximus Z790 Hero.jpg" alt="ASUS ROG Maximus Z790 Hero" id="product-image23">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name23">ASUS ROG Maximus Z790 Hero</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p class="LGA_1700">LGA 1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>192GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP23">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price23">2717 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button23">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button23");
+                                           var productName = document.getElementById("product-name23");
+                                           var productImage = document.getElementById("product-image23");
+                                           var productPrice = document.getElementById("product-price23");
+                                           var productTDP = document.getElementById("product-TDP23");
+
+                                           var product23= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product23", JSON.stringify(product23));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16813144567?Description=motherboard&cm_re=motherboard-_-13-144-567-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI MAG Z790 TOMAHAWK WIFI.png" alt="MSI MAG Z790 TOMAHAWK WIFI" id="product-image24">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name24">MSI MAG Z790 TOMAHAWK WIFI</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p class="LGA_1700">LGA 1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>192GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP24">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price24">1290 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button24">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button24");
+                                           var productName = document.getElementById("product-name24");
+                                           var productImage = document.getElementById("product-image24");
+                                           var productPrice = document.getElementById("product-price24");
+                                           var productTDP = document.getElementById("product-TDP24");
+
+                                           var product24= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product24", JSON.stringify(product24));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16813144567?Description=motherboard&cm_re=motherboard-_-13-144-567-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS ROG Strix Z690-A Gaming WiFi D4.jpg" alt="ASUS ROG Strix Z690-A Gaming WiFi D4" id="product-image25">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name25">ASUS ROG Strix Z690-A Gaming WiFi D4</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>LGA 1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>192GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Silver/Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP25">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price25">1490 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button25">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button25");
+                                           var productName = document.getElementById("product-name25");
+                                           var productImage = document.getElementById("product-image25");
+                                           var productPrice = document.getElementById("product-price25");
+                                           var productTDP = document.getElementById("product-TDP25");
+
+                                           var product25= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product25", JSON.stringify(product25));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16813145412?Description=motherboard&cm_re=motherboard-_-13-145-412-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/GIGABYTE B650 AORUS ELITE AX.png" alt="GIGABYTE B650 AORUS ELITE AX" id="product-image26">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name26">GIGABYTE B650 AORUS ELITE AX</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>AM5</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>Micro ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>192GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP26">60W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price26">1052 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button26">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button26");
+                                           var productName = document.getElementById("product-name26");
+                                           var productImage = document.getElementById("product-image26");
+                                           var productPrice = document.getElementById("product-price26");
+                                           var productTDP = document.getElementById("product-TDP26");
+
+                                           var product26= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product26", JSON.stringify(product26));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16813144486?Description=MSI%20MPG%20Z960&cm_re=MSI_MPG%20Z960-_-13-144-486-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI MPG Z690 EDGE WIFI DDR4.jpg" alt="MSI MPG Z690 EDGE WIFI DDR4 " id="product-image27">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name27">MSI MPG Z690 EDGE WIFI DDR4</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>LGA1700</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>128GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Grey</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP27">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price27">1290 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button27">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button27");
+                                           var productName = document.getElementById("product-name27");
+                                           var productImage = document.getElementById("product-image27");
+                                           var productPrice = document.getElementById("product-price27");
+                                           var productTDP = document.getElementById("product-TDP27");
+
+                                           var product27= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product27", JSON.stringify(product27));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/asus-rog-strix-b550-a-gaming/p/N82E16813119349?Description=ASUS%20ROG%20STRIX%20B550&cm_re=ASUS_ROG%20STRIX%20B550-_-13-119-349-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/ASUS ROG STRIX B550-A GAMING.jpg" alt="ASUS ROG STRIX B550-A GAMING" id="product-image28">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name28">ASUS ROG STRIX B550-A GAMING</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>AM4</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>128GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/White</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP28">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price28">880 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button28">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button28");
+                                           var productName = document.getElementById("product-name28");
+                                           var productImage = document.getElementById("product-image28");
+                                           var productPrice = document.getElementById("product-price28");
+                                           var productTDP = document.getElementById("product-TDP28");
+
+                                           var product28= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product28", JSON.stringify(product28));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/gigabyte-b450m-ds3h-wifi/p/N82E16813145164?Description=AMD%20motherboard&cm_re=AMD_motherboard-_-13-145-164-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/GIGABYTE B450M DS3H WIFI.jpg" alt="GIGABYTE B450M DS3H WIFI" id="product-image29">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name29">GIGABYTE B450M DS3H WIFI</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>AM4</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>Micro ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>64GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Brown</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP29">60W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price29">407 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button29">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button29");
+                                           var productName = document.getElementById("product-name29");
+                                           var productImage = document.getElementById("product-image29");
+                                           var productPrice = document.getElementById("product-price29");
+                                           var productTDP = document.getElementById("product-TDP29");
+
+                                           var product29= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product29", JSON.stringify(product29));
+                                           })
+                                        </script>
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/msi-mag-b550-tomahawk/p/N82E16813144326?Description=AMD%20motherboard&cm_re=AMD_motherboard-_-13-144-326-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/MSI MAG B550 TOMAHAWK.jpg" alt="MSI MAG B550 TOMAHAWK" id="product-image30">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name30">MSI MAG B550 TOMAHAWK</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Socket">
+                                                <h6 class="specLabel">CPU socket</h6>
+                                                <p>AM4</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>ATX</p>
+                                            </td>
+                                            <td class="td__MemoryMax">
+                                                <h6 class="specLabel">Memory Max</h6>
+                                                <p>128GB</p>
+                                            </td>
+                                            <td class="td__MemorySlots">
+                                                <h6 class="specLabel">Memory Slots</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black/Silver</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP30">70W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price30">811 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button30">Add</button>  
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button30");
+                                           var productName = document.getElementById("product-name30");
+                                           var productImage = document.getElementById("product-image30");
+                                           var productPrice = document.getElementById("product-price30");
+                                           var productTDP = document.getElementById("product-TDP30");
+
+                                           var product30= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product30", JSON.stringify(product30));
+                                           })
+                                        </script>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

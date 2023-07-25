@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC build | PCtechBuild </title>
+    <link rel="stylesheet" href="pRange.css" >
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+<body>
+  <div class="wrapEV">
+
+    <nav class="navbar">
+      <div class="navbar__container">
+          <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+          <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                  <a href="/PCtechbuild/Home.html" class="navbar__links">
+                      Home
+                  </a>
+              </li>
+              <li class="navbar__item">
+                  <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                      Build guides
+                  </a>
+              </li>
+              <li class="navbar__item">
+                <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                    FAQ
+                </a>
+            </li>
+              <li class="navbar__btn">
+                  <a href="/PCtechbuild/pcbuilder.html" class="button">
+                    PC Builder
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+   <!--- Hero section -->
+   <div class="main">
+      <div class="main__container">
+          <div class="main__content">
+              <h2>Build your PC</h2>
+              <h4>PCtechbuild will recommend a system based on your budget <br>and your choice</h4>
+          </div>
+          <div class="main__img--container">
+              <img src="/PCtechbuild/images/img-1.avif" alt="pic" id="main__img"> 
+          </div>
+      </div>
+   </div>
+ 
+   
+   <div class="main__1">
+    <div class="slideshow-container">
+      <div class="mySlides active">
+        <img src="images/521111.jpg" alt="Image 1">
+      </div>
+      <div class="mySlides">
+        <img src="images/4-tips-to-excel-as-a-pet-owner-while-building-your-business-867161.png" alt="Image 2">
+      </div>
+      <div class="mySlides">
+        <img src="images/image3.jpeg" alt="Image 3">
+      </div>
+      <div class="mySlides">
+        <img src="images/ws_Apple_Keyboard_2560x1600.jpg" alt="Image 3">
+      </div>
+  
+      <a class="prev" onclick="prevSlide(-1)">&#10094;</a>
+      <a class="next" onclick="nextSlide(1)">&#10095;</a>
+
+
+
+<div class="price-range-container">
+  <input type="range" id="price-range" name="price-range" min="0" max="13000" value="0" step="1000">
+  <input type="range" id="price-range-max" name="price-range-max" min="0" max="13000" value="1000" step="1000">
+  <div class="tooltip"></div>
+</div>
+<p id="price-range-value" style="display: none;">0 SAR - 1000 SAR</p>
+
+<button class="btn-9" id="reset-button">Reset</button>
+
+    <button class="butn butn__new" id="recommend" style="top: 30%; right: 2%; position: relative;" > Recommend </button>
+
+    <div class="container" style=" 
+    position: relative;">
+      <h2 style="color:aliceblue">What will the PC be used for</h2>
+
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input type="radio" class="radio" id="ANY" name="category" value="ANY">
+            <label for="ANY">ANY</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Productivity" name="category" value="Productivity">
+            <label for="Productivity">Productivity</label>
+          </div>
+          
+
+          <div class="option">
+            <input type="radio" class="radio" id="Video Rendering & Streaming" name="category" value="Video Rendering & Streaming" >
+            <label for="VideoRendiring & Streaming">Video Rendering & Streaming</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="Gaming" name="category" value="Gaming" >
+            <label for="Gaming">Gaming</label>
+          </div>
+        </div>
+        <div class="selected">
+          Select Type of usage
+        </div>
+      </div>
+    </div>
+
+ 
+   
+
+
+    
+
+      <div class="container2" style="
+      position: relative;">
+        <h2 style="color:aliceblue">What Resolution do you need</h2>
+  
+        <div class="select-box2">
+          <div class="options-container2">
+            <div class="option2">
+              <input type="radio" class="radio" id="ANY" name="resolution" value="ANY">
+              <label for="ANY">ANY</label>
+            </div>
+            <div class="option2">
+              <input type="radio" class="radio" id="1080P" name="resolution" value="1080P">
+              <label for="1080P">1080P</label>
+            </div>
+  
+            <div class="option2">
+              <input type="radio" class="radio" id="1440P" name="resolution" value="1440P">
+              <label for="1440P">1440P</label>
+            </div>
+  
+            <div class="option2">
+              <input type="radio" class="radio" id="4K" name="resolution" value="4K" >
+              <label for="4K">4K</label>
+            </div>
+          </div>
+          <div class="selected2">
+            Select Resolution
+          </div>
+        </div>
+      </div>
+
+  </div>
+  
+
+    
+
+     
+ 
+    
+    
+   
+      <div id="modal" class ="modal" style="display: none;">
+        <button class="close__btn" >&times;</button>
+        <div class="one" >Recommend BUILDS
+        </div>
+        <div class="two">
+          
+        <a href="p1080_2.html"><img src="/PCtechbuild//images/Low-average.png" alt="img_1" class="main__img_1"></a>
+        <img src="/PCtechbuild//images/Low-average.png" alt="img_1" class="main__img_2">
+      </div>
+      <div class="three">
+        <table  class="table__1" id="tb_1">
+          <tr >
+            <th class="head">CPU</th>
+            <th class="firPC">AMD Ryzen 5 5600</th>
+            <th class="secPC">Intel Core i5-12400F</th>
+            
+          </tr>
+          <tr>
+            <th class="head">GPU</th>
+            <td class="firPC">XFX RX 6600 XT Speedster SWFT 210 </td>
+            <td class="secPC">XFX RX 6600 XT Speedster SWFT 210	</td>
+          </tr>
+          <tr>
+            <th class="head">RAM</th>
+            <td class="firPC">G.Skill Ripjaws 16 GB DDR4-3600 CL16</td>
+            <td class="secPC">Team T-Force VZ 16 GB DDR4-3200 CL16</td>
+          </tr>
+          <tr>
+            <th class="head">MOTHERBOARD</th>
+            <td class="firPC">Asus TUF Gaming B550M-Plus</td>
+            <td class="secPC">Asus Prime H670-Plus D4</td>
+          </tr>
+          <tr>
+            <th class="head">STORAGE</th>
+            <td class="firPC">Silicon Power A60 1 TB</td>
+            <td class="secPC">Silicon Power A60 1 TB</td>
+          </tr>
+        
+        </table>
+      </div>
+        <p class="PCprice1">4,497.6 SAR</p>
+        <p class="PCprice2">4,067.69 SAR</p>
+
+        <a 
+        style="position: relative;right:6%; text-decoration: none;" 
+        href="p1080_2.html">
+          <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+      </a>
+  
+        <a 
+        style="position: relative;left:32%; text-decoration: none" 
+        href="p1080.html">
+          <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+      </a>
+      
+      </div>
+    
+    
+  <!--            -->
+  <!--            -->
+  <!--            -->
+  <!--            -->
+
+    <div id="modal2" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/entry.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">Intel Core i7-12700KF</td>
+          <td class="secPC">AMD Ryzen 9 5900X</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">MSI RTX 3070 Ti Ventus 3X OC</td>
+          <td class="secPC">Gigabyte RX 6900 XT Aorus Master</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">OLOy Blade 32 GB DDR4-3600 CL18</td>
+          <td class="secPC">G.Skill 32 GB DDR4-3600 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">ASRock Z690 Extreme WiFi 6E</td>
+          <td class="secPC">ASRock X570 Taichi</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Silicon Power P34A80 1 TB</td>
+          <td class="secPC">Samsung 980 Pro 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+   
+      <p class="PCprice1">7,030.95 SAR</p>
+      <p class="PCprice2">8,424.41 SAR</p>
+
+      <a 
+        style="position: relative;right:6%; text-decoration: none;" 
+        href="p1440.html">
+          <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+      </a>
+  
+        <a 
+        style="position: relative;left:32%; text-decoration: none" 
+        href="p14402.html">
+          <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+      </a>
+      
+    </div>
+
+    <div id="modal3" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_3">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 9 5900X</td>
+          
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">Gigabyte RX 6900 XT Aorus Master</td>
+          
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">G.Skill Ripjaws V 32 GB DDR4-3600 CL16</td>
+          
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">ASRock X570 Taichi</td>
+          
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Samsung 980 Pro 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice3">8,424.41 SAR</p>
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="p14402.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+     
+    
+      
+    </div>
+    <div id="modal4" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_3">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 7 5800X3D </td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">NVIDIA RTX 3090 Founders Edition </td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">G.Skill Ripjaws V 32 GB DDR4-3600 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">MSI MEG X570 Unify </td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Samsung 980 Pro 2 TB  </td>
+        </tr>
+      
+      </table>
+    </div>
+  
+      <p class="PCprice3">9,062.96 SAR</p>
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="p4k.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+    </div>
+      <!--            -->
+  <!--            -->
+  <!--            -->
+  <!--            -->
+    <div id="modal5" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image (1).png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 5 5600</td>
+          <td class="secPC">Intel Core i7-12700K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">XFX RX 6600 XT Speedster SWFT 210</td>
+          <td class="secPC">Zotac RTX 3060 Twin Edge OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">G.Skill Ripjaws V 16 GB DDR4-3600 CL16</td>
+          <td class="secPC">G.Skill Aegis 32 GB DDR4-3200 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">Asus TUF Gaming B550M-Plus</td>
+          <td class="secPC">ASRock Z690 Extreme WiFi 6E</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Mushkin Enhanced Helix-L 1 TB</td>
+          <td class="secPC">Samsung 980 Pro 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+    <p class="PCprice1">4,596.28 SAR</p>
+    <p class="PCprice2">6,033.74 SAR</p>
+
+    <a 
+    style="position: relative;right:6%; text-decoration: none;" 
+    href="vs1080.html">
+      <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+  </a>
+
+    <a 
+    style="position: relative;left:32%; text-decoration: none" 
+    href="vs1080_2.html">
+      <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+  </a>
+      
+    </div>
+
+
+    <div id="modal6" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_3">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="secPC">Intel Core i7-12700K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="secPC">Zotac RTX 3060 Twin Edge OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="secPC">G.Skill Aegis 32 GB DDR4-3200 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="secPC">ASRock Z690 Extreme WiFi 6E</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="secPC">Samsung 980 Pro 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice3">6,033.74 SAR</p>
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="vs1080_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+      
+      
+    </div>
+
+
+
+
+
+    <div id="modal7" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image (1).png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 9 5900X</td>
+          <td class="secPC">Intel Core i7-12700K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">MSI RTX 3070 Ti Ventus 3X OC</td>
+          <td class="secPC">MSI RTX 3070 Ti Ventus 3X OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">Corsair Vengeance 32 GB DDR4-3600 CL16</td>
+          <td class="secPC">OLOy Blade 32 GB DDR4-3600 CL18</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">MSI MAG X570S Tomahawk Max WiFi</td>
+          <td class="secPC">ASRock Z690 Extreme WiFi 6E</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Crucial P5 Plus 2 TB</td>
+          <td class="secPC">Silicon Power P34A80 1 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice1">7,610.52 SAR</p>
+      <p class="PCprice2">6,809.46 SAR</p>
+
+      <a 
+      style="position: relative;right:6%; text-decoration: none;" 
+      href="vs1440_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+
+      <a 
+      style="position: relative;left:32%; text-decoration: none" 
+      href="vs1440.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+      
+      
+    </div>
+    
+
+
+    <div id="modal8" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_3">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="secPC">AMD Ryzen 9 5900X</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="secPC">MSI RTX 3070 Ti Ventus 3X OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="secPC">Corsair Vengeance 32 GB DDR4-3600 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="secPC">MSI MAG X570S Tomahawk Max WiFi</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="secPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice3">7,610.52 SAR</p>
+      
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="vs1440_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="modal9" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image (1).png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 9 5900X</td>
+          <td class="secPC">Intel Core i7-12700K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">Gigabyte RX 6900 XT Aorus Master</td>
+          <td class="secPC">Gigabyte RTX 3080 Ti Aorus Xtreme</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">G.Skill Ripjaws V 32 GB DDR4-3600 CL16</td>
+          <td class="secPC">Corsair Vengeance 32 GB DDR5-5600 CL36</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">ASRock X570 Taichi</td>
+          <td class="secPC">Asus ROG Strix Z690-F Gaming WiFi</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Crucial P5 Plus 2 TB</td>
+          <td class="secPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice1">8,426.96 SAR</p>
+      <p class="PCprice2">12,642.09 SAR</p>
+
+      <a 
+      style="position: relative;right:6%; text-decoration: none;" 
+      href="vs4k.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+
+      <a 
+      style="position: relative;left:32%; text-decoration: none" 
+      href="vs4k_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+      
+    </div>
+
+
+
+
+    <div id="modal10" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_3">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="secPC">Intel Core i7-12700K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="secPC">Gigabyte RTX 3080 Ti Aorus Xtreme</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="secPC">Corsair Vengeance 32 GB DDR5-5600 CL36</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="secPC">Asus ROG Strix Z690-F Gaming WiFi</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="secPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice3">12,642.09 SAR</p>
+
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="vs4k_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+      
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="modal11" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/entry.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/entry.png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">Intel Core i5-12400F</td>
+          <td class="secPC">Intel Core i5-12600KF</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">Zotac RTX 3060 Gaming Twin Edge OC</td>
+          <td class="secPC">MSI RTX 3050 LHR Ventus 3X OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">Team T-Force Vulcan Z 16 GB DDR4-3200 CL16</td>
+          <td class="secPC">G.Skill Ripjaws V 16 GB DDR4-3600 CL16</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">MSI Pro B660M-A DDR4</td>
+          <td class="secPC">ASRock Z690 Extreme WiFi 6E</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Mushkin Enhanced Helix-L 1 TB</td>
+          <td class="secPC">Crucial P5 Plus 1 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice1">3,825.27 SAR</p>
+      <p class="PCprice2">5,353.7 SAR</p>
+      <a 
+      style="position: relative;right:6%; text-decoration: none;" 
+      href="G1080.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+
+      <a 
+      style="position: relative;left:32%; text-decoration: none" 
+      href="G1080_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+    
+      
+      
+    </div>
+
+
+    <div id="modal12" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image (1).png" alt="img_1" class="main__img_2">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">AMD Ryzen 7 5800X</td>
+          <td class="secPC">Intel Core i9-12900K</td>
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">Gigabyte RTX 3070 LHR Gaming OC Rev 2.0</td>
+          <td class="secPC">ASRock RX 6800 XT Phantom Gaming D OC</td>
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">Corsair Vengeance LPX 32 GB DDR4-3600 CL16</td>
+          <td class="secPC">G.Skill Trident Z RGB 32 GB DDR4-4000 CL18</td>
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">Asus TUF Gaming X570-Plus</td>
+          <td class="secPC">ASRock Z690 Extreme WiFi 6E</td>
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Crucial P5 Plus 2 TB</td>
+          <td class="secPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+      <p class="PCprice1">6,749.49 SAR</p>
+      <p class="PCprice2">7,308.72 SAR</p>
+
+      <a 
+      style="position: relative;right:6%; text-decoration: none;" 
+      href="G1440.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+
+      <a 
+      style="position: relative;left:32%; text-decoration: none" 
+      href="G1440_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+    
+    </div>
+
+    <div id="modal13" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">Intel Core i9-12900K</td>
+
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">ASRock RX 6800 XT Phantom Gaming D OC</td>
+ 
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">G.Skill Trident Z RGB 32 GB DDR4-4000 CL18</td>
+
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC">ASRock Z690 Extreme WiFi 6E</td>
+ 
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+
+    <p class="PCprice3">7,308.72 SAR</p>
+    <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="G1440_2.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+      
+    </div>
+
+
+
+
+
+
+    <div id="modal14" class="modal" style="display: none;">
+      <button class="close__btn" >&times;</button>
+      <div class="one" >Recommend BUILDS
+      </div>
+      <div class="two">
+      <img src="/PCtechbuild//images/803-fractal-design-meshify-2-thumb-image.png" alt="img_1" class="main__img_1" style="left:4%">
+    </div>
+    <div class="three">
+      <table class="table__1" id="tb_1">
+        <tr >
+          <th class="head">CPU</th>
+          <td class="firPC">Intel Core i9-12900K</td>
+
+          
+        </tr>
+        <tr>
+          <th class="head">GPU</th>
+          <td class="firPC">NVIDIA RTX 3090 Founders Edition</td>
+ 
+        </tr>
+        <tr>
+          <th class="head">RAM</th>
+          <td class="firPC">Corsair Dominator Platinum RGB 32 GB DDR5-5600 CL36</td>
+
+        </tr>
+        <tr>
+          <th class="head">MOTHERBOARD</th>
+          <td class="firPC"> Asus ROG Strix Z690-F Gaming WiFi</td>
+ 
+        </tr>
+        <tr>
+          <th class="head">STORAGE</th>
+          <td class="firPC">Crucial P5 Plus 2 TB</td>
+        </tr>
+      
+      </table>
+    </div>
+
+      <p class="PCprice3">10,764.79 SAR</p>
+      <a 
+      class="moreDetalis__1"
+      style="position: relative;left: 47%; text-decoration: none" 
+      href="G4k.html">
+        <i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+    </a>
+    </div>
+
+   </div>
+
+   <!--- slider section -->
+
+   <footer>
+    <div class="footer-content">
+        <h3  style="color: rgb(58, 0, 0);"> <i class="fa-solid fa-gavel"  style="color: rgb(58, 0, 0);"></i> PCtechBuild</h3>
+        <p>Build your own PC with our PC builder tool, or choose from our pre-built PC's or learn how to build from our guides</p>
+        <ul class="footer__links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="build guides.html">Build Guides</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="pcbuilder.html">PC Builder</a></li>
+            
+        </ul>
+
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2023 PCtechBuild. designed by <span>Faisal & Ahmed</span></p>
+    </div>
+</footer>
+
+  </div>
+    <!--- Navbar section -->
+   
+     
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

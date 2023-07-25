@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Case</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Type</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Color</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Power Supply</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Side Panel</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>External 5.25" Bays</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Internal 3.5" Bays</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16811112595?Description=Cases&cm_re=Cases-_-11-112-595-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Lian Li O11 AIR MINI.jpg" alt="Lian Li O11 AIR MINI" id="product-image61">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name61">Lian Li O11 AIR MINI</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mini Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>White</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP61">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price61">531SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button61">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button61");
+                                           var productName = document.getElementById("product-name61");
+                                           var productImage = document.getElementById("product-image61");
+                                           var productPrice = document.getElementById("product-price61");
+                                           var productTDP = document.getElementById("product-TDP61");
+
+                                           var product61= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product61", JSON.stringify(product61));
+                                           })
+                                        </script>
+
+                              
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-lian-li-o11-dynamic-e-atx-full-tower-case/p/2AM-000Z-00048?Description=Lian%20Li%20O11D%20XL&cm_re=Lian_Li%20O11D%20XL-_-2AM-000Z-00048-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Lian Li O11D XL.jpg" alt="Lian Li O11D XL-X" id="product-image62">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name62">Lian Li O11D XL-X</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Full Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>4</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP62">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price62">1479 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button62">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button62");
+                                           var productName = document.getElementById("product-name62");
+                                           var productImage = document.getElementById("product-image62");
+                                           var productPrice = document.getElementById("product-price62");
+                                           var productTDP = document.getElementById("product-TDP62");
+
+                                           var product62= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product62", JSON.stringify(product62));
+                                           })
+                                        </script>
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-phanteks-eclipse-g360a-micro-atx-mid-tower/p/N82E16811854116?Description=Phanteks%20Eclipse%20G360A\&cm_re=Phanteks_Eclipse%20G360A\-_-11-854-116-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Phanteks Eclipse G360A.jpg" alt="Phanteks Eclipse G360A" id="product-image63">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name63">Phanteks Eclipse G360A</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP63">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price63">442 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button63">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button63");
+                                           var productName = document.getElementById("product-name63");
+                                           var productImage = document.getElementById("product-image63");
+                                           var productPrice = document.getElementById("product-price63");
+                                           var productTDP = document.getElementById("product-TDP63");
+
+                                           var product63= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product63", JSON.stringify(product63));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-corsair-4000d-airflow-atx-mid-tower/p/N82E16811139156?Description=Corsair%204000D%20Airflow&cm_re=Corsair_4000D%20Airflow-_-11-139-156-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Corsair 4000D Airflow.jpg" alt="Corsair 4000D Airflow" id="product-image64">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name64">Corsair 4000D Airflow</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tinted Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP64">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price64">464 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button64">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button64");
+                                           var productName = document.getElementById("product-name64");
+                                           var productImage = document.getElementById("product-image64");
+                                           var productPrice = document.getElementById("product-price64");
+                                           var productTDP = document.getElementById("product-TDP64");
+
+                                           var product64= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product64", JSON.stringify(product64));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-fractal-design-pop-xl-air-rgb-atx-full-tower/p/N82E16811352180?Description=Fractal%20Design%20Pop%20XL%20Air&cm_re=Fractal_Design%20Pop%20XL%20Air-_-11-352-180-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Fractal Design Pop XL Air.jpg" alt="Fractal Design Pop XL Air" id="product-image65">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name65">Fractal Design Pop XL Air</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Full Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>3</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP65">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price65">486 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button65">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        
+                                        <script>
+                                            var addBtn = document.getElementById("add-button65");
+                                           var productName = document.getElementById("product-name65");
+                                           var productImage = document.getElementById("product-image65");
+                                           var productPrice = document.getElementById("product-price65");
+                                           var productTDP = document.getElementById("product-TDP65");
+
+                                           var product65= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product65", JSON.stringify(product65));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-fractal-design-meshify-c-dark-tg-atx-mid-tower/p/N82E16811352072?Description=Fractal%20Design%20Meshify%20C&cm_re=Fractal_Design%20Meshify%20C-_-11-352-072-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Fractal Design Meshify C.jpg" alt="Fractal Design Meshify C" id="product-image66">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name66">Fractal Design Meshify C</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tinted Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP66">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price66">442 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button66">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button66");
+                                           var productName = document.getElementById("product-name66");
+                                           var productImage = document.getElementById("product-image66");
+                                           var productPrice = document.getElementById("product-price66");
+                                           var productTDP = document.getElementById("product-TDP66");
+
+                                           var product66= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product66", JSON.stringify(product66));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/2AM-000Z-000A7?Description=LIAN%20LI%20LANCOOL%20216/PWM%20Fans&cm_re=LIAN_LI%20LANCOOL%20216/PWM%20Fans-_-2AM-000Z-000A7-_-Product">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/LIAN LI LANCOOL 216.jpg" alt="LIAN LI LANCOOL 216" id="product-image67">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name67">LIAN LI LANCOOL 216/PWM Fans</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP67">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price67">455 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button67">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button67");
+                                           var productName = document.getElementById("product-name67");
+                                           var productImage = document.getElementById("product-image67");
+                                           var productPrice = document.getElementById("product-price67");
+                                           var productTDP = document.getElementById("product-TDP67");
+
+                                           var product67= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product67", JSON.stringify(product67));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/red-cooler-master-masterbox-mb511-atx-mid-tower/p/N82E16811119346?Description=Cooler%20Master%20MasterBox%20MB511&cm_re=Cooler_Master%20MasterBox%20MB511-_-11-119-346-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Cooler Master MasterBox MB511.jpg" alt="Cooler Master MasterBox MB511" id="product-image68">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name68">Cooler Master MasterBox MB511</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP68">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price68">354 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button68">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button68");
+                                           var productName = document.getElementById("product-name68");
+                                           var productImage = document.getElementById("product-image68");
+                                           var productPrice = document.getElementById("product-price68");
+                                           var productTDP = document.getElementById("product-TDP68");
+
+                                           var product68= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product68", JSON.stringify(product68));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/black-phanteks-enthoo-pro-atx-full-tower/p/N82E16811854069?Description=Phanteks%20Enthoo%20Pro%20TG&cm_re=Phanteks_Enthoo%20Pro%20TG-_-11-854-069-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Phanteks Enthoo Pro TG.jpg" alt="Phanteks Enthoo Pro TG" id="product-image69">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name69">Phanteks Enthoo Pro TG</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Full Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>3</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>6</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP69">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price69">619 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button69">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button69");
+                                           var productName = document.getElementById("product-name69");
+                                           var productImage = document.getElementById("product-image69");
+                                           var productPrice = document.getElementById("product-price69");
+                                           var productTDP = document.getElementById("product-TDP69");
+
+                                           var product69= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product69", JSON.stringify(product69));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/p/N82E16811129272?Description=Cases&cm_re=Cases-_-11-129-272-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Antec Dark League DF700 FLUX.jpg" alt="Antec Dark League DF700 FLUX" id="product-image70">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name70">Antec Dark League DF700 FLUX</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>ATX Mid Tower</p>
+                                            </td>
+                                            <td class="td__Color">
+                                                <h6 class="specLabel">Color</h6>
+                                                <p>Black</p>
+                                            </td>
+                                            <td class="td__PowerSupply">
+                                                <h6 class="specLabel">Power Supply</h6>
+                                                <p>None</p>
+                                            </td>
+                                            <td class="td__SidePanel">
+                                                <h6 class="specLabel">Side Panel</h6>
+                                                <p>Tempered Glass</p>
+                                            </td>
+                                            <td class="td__External">
+                                                <h6 class="specLabel">External 5.25" Bays</h6>
+                                                <p>0</p>
+                                            </td>
+                                            <td class="td__Internal">
+                                                <h6 class="specLabel">Internal 3.5" Bays</h6>
+                                                <p>2</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP70">0W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price70">487 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button70">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button70");
+                                           var productName = document.getElementById("product-name70");
+                                           var productImage = document.getElementById("product-image70");
+                                           var productPrice = document.getElementById("product-price70");
+                                           var productTDP = document.getElementById("product-TDP70");
+
+                                           var product70= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product70", JSON.stringify(product70));
+                                           })
+                                        </script>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>

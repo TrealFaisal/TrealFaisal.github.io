@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC builder | PCtechBuild</title>
+    <link rel="stylesheet" href="pcbuilder.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/3049ab8192.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+     <!--- Navbar section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">  <i class="fa-solid fa-gavel"></i>  PCtechBuild</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/Home.html" class="navbar__links">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/build guides.html" class="navbar__links">
+                        Build guides
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/PCtechbuild/FAQ.html" class="navbar__links">
+                        FAQ
+                    </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/PCtechbuild/pcbuilder.html" class="button">
+                      PC Builder
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <section class="main-wrapper">
+        <div class="wrapper wrapper__pagetitle" style="background-color: rgb(255, 152, 152);">
+            <section class="main_pagetitle">
+                <h1 class="pagetitle" style="font-family: 'Times New Roman', Times, serif;">Select a Storage</h1>
+            </section>
+        </div>
+        <div class="wrapper wrapper__pageContent">
+            <section class="xs-col-11 xs-mx-auto">
+                <div class="wrapper--col">
+                    <div class="main-content">
+                        <div class="productList block">
+                            <div class="productList__breadcrumbs"></div>
+                            <div class="subTitle">
+                                <div class="subtitle__header">
+                                    <h3 class="subtitle__title">Compatible Products</h3>
+                                </div>
+
+                                <div class="subTitle__form">
+
+                                <form class="form__search--products">
+                                    <label class="form-label">
+                                        <svg class="shape-search">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </svg>
+                                    </label>
+                                    <input type="text" class="form-input" placeholder="Search for a product" id="search">
+                                </form>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#search").on("keyup", function() {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#paginated_table tr").filter(function() {
+                                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                        });
+                                      });
+                                </script>
+                            </div>
+
+                            </div>
+
+                            <div class="productList__wrapper">
+                                <div class="productList__cover"></div>
+                                <table class="productList--detailed" id="paginated_table" role="grid">
+                                    <thead>
+                                        <tr role="row" class="tablesorter-headerRow">
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Product</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Core: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Capacity</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Core Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Type</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Performance Boost Clock: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Cache</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Form Factor</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Interface</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="TDP: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>TDP</p>
+                                                </div>
+                                            </th>
+                                            <th class="th--sortable tablesorter-header tablesorter-headerUnSorted th--unsorted" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="paginated_table"  unselectable="on" aria-sort="none" aria-label="Price: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                                <div class="tablesorter-header-inner">
+                                                    <p>Price</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="category_content" aria-live="polite" aria-relevant="all">
+
+                                        <!-- Product 1 -->
+                                        <tr class="tr__product product-id-001" data-pb-id="001">
+                                            <td class="td__name">
+                                                <a href="https://www.amazon.sa/-/en/Seagate-BarraCuda-Internal-Hard-Drive/dp/B07H2RR55Q/ref=asc_df_B07H2RR55Q/?tag=sashogostdde-21&linkCode=df0&hvadid=452867324121&hvpos=&hvnetw=g&hvrand=6763569180921329297&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9076966&hvtargid=pla-613251472056&th=1">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Seagate BarraCuda 2TB Internal Hard Drive HDD.jpg" alt="Seagate BarraCuda 2TB Internal Hard Drive HDD" id="product-image41">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name41">Seagate BarraCuda 2TB Internal Hard Drive HDD</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>2 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>7200 RPM</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p> 256MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>3.5 Inches</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	SATA 6.0 Gb/s</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP41">20W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price41">215 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button41">Add</button>    
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button41");
+                                           var productName = document.getElementById("product-name41");
+                                           var productImage = document.getElementById("product-image41");
+                                           var productPrice = document.getElementById("product-price41");
+                                           var productTDP = document.getElementById("product-TDP41");
+
+                                           var product41= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product41", JSON.stringify(product41));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 2 -->
+                                        <tr class="tr__product product-id-002" data-pb-id="002">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/seagate-barracuda-st1000dm010-1tb/p/N82E16822179010?Description=storage%20hdd%201tb&cm_re=storage_hdd%201tb-_-22-179-010-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Seagate BarraCuda 1TB Hard Drive Bare Drive.jpg" alt="Seagate BarraCuda 1TB Hard Drive Bare Drive" id="product-image42">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name42">Seagate BarraCuda 1TB Hard Drive Bare Drive</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>1 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>7200 RPM</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p> 64MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>3.5 Inches</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	SATA 6.0 Gb/s</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP42">20W</p> 
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price42">181 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button42">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button42");
+                                           var productName = document.getElementById("product-name42");
+                                           var productImage = document.getElementById("product-image42");
+                                           var productPrice = document.getElementById("product-price42");
+                                           var productTDP = document.getElementById("product-TDP42");
+
+                                           var product42= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product42", JSON.stringify(product42));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 3 -->
+                                        <tr class="tr__product product-id-003" data-pb-id="003">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/samsung-1tb-980-pro/p/N82E16820147790">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/SAMSUNG 980 PRO.jpg" alt="SAMSUNG 980 PRO" id="product-image43">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name43">SAMSUNG 980 PRO W/Heatsink</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>1 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p> 1024MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	M.2 PCIe 4.0 X4</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP43">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price43">415 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button43">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button43");
+                                           var productName = document.getElementById("product-name43");
+                                           var productImage = document.getElementById("product-image43");
+                                           var productPrice = document.getElementById("product-price43");
+                                           var productTDP = document.getElementById("product-TDP43");
+
+                                           var product43= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product43", JSON.stringify(product43));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 4 -->
+                                        <tr class="tr__product product-id-004" data-pb-id="004">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/samsung-970-evo-plus-2tb/p/N82E16820147744">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/SAMSUNG 970 EVO PLUS.jpg" alt="SAMSUNG 970 EVO PLUS" id="product-image44">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name44">SAMSUNG 970 EVO PLUS</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>2 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p> 1024 MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	M.2 PCIe 3.0 X</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP44">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price44">645 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button44">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button44");
+                                           var productName = document.getElementById("product-name44");
+                                           var productImage = document.getElementById("product-image44");
+                                           var productPrice = document.getElementById("product-price44");
+                                           var productTDP = document.getElementById("product-TDP44");
+
+                                           var product44= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product44", JSON.stringify(product44));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 5 -->
+                                        <tr class="tr__product product-id-005" data-pb-id="005">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/crucial-mx500-1tb/p/N82E16820156174?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-156-174-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Crucial MX500.jpg" alt="Crucial MX500" id="product-image45">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name45">Crucial MX500</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>1 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>1024 MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	2.5"</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	SATA 6.0 Gb/s</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP45">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price45">240 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button45">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button45");
+                                           var productName = document.getElementById("product-name45");
+                                           var productImage = document.getElementById("product-image45");
+                                           var productPrice = document.getElementById("product-price45");
+                                           var productTDP = document.getElementById("product-TDP45");
+
+                                           var product45= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product45", JSON.stringify(product45));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 6 -->
+                                        <tr class="tr__product product-id-006" data-pb-id="006">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/crucial-mx500-500gb/p/N82E16820156173?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-156-173-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Crucial MX500.jpg" alt="Crucial MX500" id="product-image46">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name46">Crucial MX500</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>500 GB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>512 MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	2.5"</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>	SATA 6.0 Gb/s</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP46">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price46">185 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button46">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        
+                                        <script>
+                                            var addBtn = document.getElementById("add-button46");
+                                           var productName = document.getElementById("product-name46");
+                                           var productImage = document.getElementById("product-image46");
+                                           var productPrice = document.getElementById("product-price46");
+                                           var productTDP = document.getElementById("product-TDP46");
+
+                                           var product46= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product46", JSON.stringify(product46));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 7 -->
+                                        <tr class="tr__product product-id-007" data-pb-id="007">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/kingston-2048gb-kc3000/p/N82E16820242660?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-242-660-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Kingston KC3000.jpg" alt="Kingston KC3000" id="product-image47">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name47">Kingston KC3000</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>2 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>DRAM</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>M.2 PCIe 4.0 X4</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP47">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price47">754 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button47">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button47");
+                                           var productName = document.getElementById("product-name47");
+                                           var productImage = document.getElementById("product-image47");
+                                           var productPrice = document.getElementById("product-price47");
+                                           var productTDP = document.getElementById("product-TDP47");
+
+                                           var product47= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product47", JSON.stringify(product47));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 8 -->
+                                        <tr class="tr__product product-id-008" data-pb-id="008">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/crucial-mx500-250gb/p/N82E16820156172?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-156-172-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Corsair MP600 PRO LPX.jpg" alt="Corsair MP600 PRO LPX" id="product-image48">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name48">Corsair MP600 PRO LPX</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>1 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>DRAM</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>M.2 PCIe 4.0 X4</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP48">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price48">392 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button48">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button48");
+                                           var productName = document.getElementById("product-name48");
+                                           var productImage = document.getElementById("product-image48");
+                                           var productPrice = document.getElementById("product-price48");
+                                           var productTDP = document.getElementById("product-TDP48");
+
+                                           var product48= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product48", JSON.stringify(product48));
+                                           })
+                                        </script>
+                                        
+
+                                        <!-- Product 9 -->
+                                        <tr class="tr__product product-id-009" data-pb-id="009">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/crucial-mx500-250gb/p/N82E16820156172?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-156-172-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Western Digital WD_BLACK.jpg" alt="Western Digital WD_BLACK" id="product-image49">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name49">Western Digital WD_BLACK</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>500 GB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>DRAM</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>PCIe Gen4 16GT/s, up to 4 Lanes</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP49">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price49">185 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button49">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button49");
+                                           var productName = document.getElementById("product-name49");
+                                           var productImage = document.getElementById("product-image49");
+                                           var productPrice = document.getElementById("product-price49");
+                                           var productTDP = document.getElementById("product-TDP49");
+
+                                           var product49= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product49", JSON.stringify(product49));
+                                           })
+                                        </script>
+
+
+
+                                        <!-- Product 10 -->
+                                        <tr class="tr__product product-id-010" data-pb-id="010">
+                                            <td class="td__name">
+                                                <a href="https://www.newegg.com/global/sa-en/crucial-mx500-250gb/p/N82E16820156172?Description=Storage%20SSD&cm_re=Storage_SSD-_-20-156-172-_-Product&quicklink=true">
+                                                    <div class="td__imageWrapper">
+                                                        <div class="td__image">
+                                                            <img src="/PCtechbuild/images/Samsung 980 PRO.jpg" alt="Samsung 980 PRO" id="product-image50">
+                                                        </div>
+                                                    </div>
+                                                    <div class="td__nameWrapper">
+                                                        <p id="product-name50">Samsung 980 PRO</p>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="td__Capacity">
+                                                <h6 class="specLabel">Capacity</h6>
+                                                <p>2 TB</p>
+                                            </td>
+                                            <td class="td__Type">
+                                                <h6 class="specLabel">Type</h6>
+                                                <p>SSD</p>
+                                            </td>
+                                            <td class="td__Cache">
+                                                <h6 class="specLabel">Cache</h6>
+                                                <p>1024 MB</p>
+                                            </td>
+                                            <td class="td__FormFactor">
+                                                <h6 class="specLabel">Form Factor</h6>
+                                                <p>	M.2-2280</p>
+                                            </td>
+                                            <td class="td__Interface">
+                                                <h6 class="specLabel">Interface</h6>
+                                                <p>M.2 PCIe 4.0 X4</p>
+                                            </td>
+                                            <td class="td__tdp">
+                                                <h6 class="specLabel">TDP</h6>
+                                                <p id="product-TDP50">10W</p>
+                                            </td>
+                                            <td class="td__price">
+                                                <p id="product-price50">691 SAR</p>
+                                                <a href="/PCtechbuild/pcbuilder.html">
+                                                <button class="btn btn--small btn--add" id="add-button50">Add</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+
+                                        <script>
+                                            var addBtn = document.getElementById("add-button50");
+                                           var productName = document.getElementById("product-name50");
+                                           var productImage = document.getElementById("product-image50");
+                                           var productPrice = document.getElementById("product-price50");
+                                           var productTDP = document.getElementById("product-TDP50");
+
+                                           var product50= {
+                                               name: productName.textContent,
+                                               image: productImage.src,
+                                               price: productPrice.textContent,
+                                               TDP: productTDP.textContent
+                                           }
+                                           addBtn.addEventListener("click", function(){
+                                               localStorage.setItem("product50", JSON.stringify(product50));
+                                           })
+                                        </script>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+        </div>
+        
+    </section>
+
+   
+
+    
+    
+    <script src="pcbuilder.js"></script>
+</body>
+</html>
