@@ -1315,6 +1315,121 @@ input[type="range"]:hover + .tooltip {
     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 }
 
+@media only screen and (max-device-width: 480px){
+  .price-range-container{
+    align-items: center;
+    justify-self: center;
+  
+  }
+  #price-range{
+    align-items: center;
+    justify-self: center;
+  
+  }
+  .tooltip{
+    align-items: center;
+    justify-self: center;
+   
+  }
+  #reset-button{
+    align-items: center;
+    justify-self: center;
+
+    
+  }
+}
+
+@media only screen and (max-device-width: 768px){
+  .price-range-container{
+    align-items: center;
+    justify-self: center;
+    top: auto;
+  }
+  #price-range{
+    align-items: center;
+    justify-self: center;
+  
+  }
+  .tooltip{
+    align-items: center;
+    justify-self: center;
+   
+  }
+  #reset-button{
+    align-items: center;
+    justify-self: center;
+    top: auto;
+
+    
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .main__img--container {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Other CSS styles for small devices */
+}
+@media only screen and (max-device-width: 480px) {
+  .container, .container2 {
+   top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    width: 100%;
+
+  }
+  /* Other CSS styles for small devices */
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main__img--container {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Other CSS styles for small devices */
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container, .container2 {
+   top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    width: 100%;
+
+  }
+  /* Other CSS styles for small devices */
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .main__img--container {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Other CSS styles for small devices */
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container, .container2 {
+   top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    width: 100%;
+
+  }
+  /* Other CSS styles for small devices */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container, .container2 {
+   top: auto;
+    left: auto;
+    transform: translate(0, 0);
+    width: 100%;
+
+  }
+  /* Other CSS styles for small devices */
+}
+
 
 
 
